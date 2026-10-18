@@ -1,0 +1,4 @@
+# OCR offline (ocr/ocr.py). Además hace falta el binario de Tesseract con el idioma español (spa).
+pytesseract
+pillow
+numpy

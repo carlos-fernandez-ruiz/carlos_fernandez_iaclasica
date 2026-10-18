@@ -1,0 +1,292 @@
+[
+  {
+    "documento": "normas_gimnasio",
+    "titulo": "Normas de uso del gimnasio de musculación",
+    "paginas": [
+      "pagina_1.png"
+    ],
+    "texto": "GIMNASIO DE MUSCULACIÓN\nNORMAS DE USO\n\nEl uso de las instalaciones deberá ser cuidadoso y respetuoso.\n\nAntes de la entrada a la sala se lavará las manos con el gel hidroalcohólico habilitado para\nello.\n\nAl inicio y la finalización del ejercicio, las máquinas deberán quedar limpias y\ndesinfectadas para la utilización posterior, se pondrá a disposición de los usuarios gel\ndesinfectante.\n\nSerá necesario acudir con un correcto equipamiento y material, sin poder acceder con\nindumentaria no deportiva (vaqueros, gorras, botas, chanclas, etc.).\n\nPor razones de higiene, deberá acudir con una toalla para evitar que haya sudor en las\nmáquinas y una bayeta para efectuar la desinfección de los aparatos.\n\nLos aparatos de musculación (mancuernas, discos, pesas, etc.) deberán permanecer dentro\nde la zona destinada para su uso. Una vez utilizado, deberá colocar el material en el soporte\ncorrespondiente.\n\nLa mascarilla será de uso obligatorio en el gimnasio, sin posibilidad de hacer ejercicio\nsin ella.\n\nMantener en todo momento la distancia minima de seguridad en 1,5 metros.\n\nSe deberá seguir estrictamente las señales de circulación de personas, se habilitará un punto\nde entrada y otro de salida a la instalación, para evitar que haya coincidencia entre los\nusuarios\n\nLa sala de musculación permanecerá ventilada en todo momento.\n\nPor medidas de higiene, queda prohibido acceder con mochilas al interior del gimnasio.\nPara ello se podrá hacer uso de las taquillas habilitadas.\n\nEl entrenamiento será de forma individual.\nEl tiempo de ejecución en las maquinas será el imprescindible.\nHabrá que respetar las limitaciones de aforo que estén vigentes en cada momento.\n\nLa limpieza es importante. Deberán usarse las papeleras instaladas para depositar los\ndesperdicios (botellas, agua, papeles, etc.).\n\nEstará terminantemente prohibido el consumo de cualquier alimento y bebida, a excepción\nde agua.\n\nLa Dirección podrá prohibir la entrada a cualquier persona que hiciera un mal uso de las\ninstalaciones. Así como, no estar al corriente del pago de las tasas.\n\nPara acceder al gimnasio será obligatorio la presentación del carnet de usuario, sin él no\nse podrá entrar al mismo.\n\nCada abono dará derecho a una sesión de musculación al día.\n\nDeberán respetarse los horarios de las actividades, así como los horarios de apertura y\n\ncierre del gimnasio. La sesión durará como máximo 1 hora, comprendida en las franjas\nhorarias que se han establecido.",
+    "campos": {},
+    "avisos": []
+  },
+  {
+    "documento": "rutina_3_dias",
+    "titulo": "Rutina de gimnasio de 3 días",
+    "paginas": [
+      "pagina_1.png"
+    ],
+    "texto": "Rutina Gimnasio de 3 días\n\nDía 1\nMúsculo Ejercicio Series Repeticiones Descanso\nPierna Sentadilla Trasera 3 6 3-4 min\nPierna Extensión Cuádriceps 3 12 1-2 min\nPecho Press Banca 3 10 2-3 min\nEspalda Peso Muerto 3 10 2-3 min\nBiceps Curl Biceps Mancuerna 3 10 1-2 min\nTriceps Press francés 3 12 1-2 min\n\nDía 2\nMúsculo Ejercicio Series Repeticiones Descanso\nEspalda Peso Muerto Rumano 3 5 3-4 min\n\nElevación Lateral 3 10 1-2 min\n\nEspalda Remo Barra T 3 12 2-3 min\nPierna Elevación Gemelos de Pie 3 10 1-2 min\nPecho Aperturas Polea 3 12 1-2 min\nAbdomina Crunch Abdominal 3 12 1 min\nTríceps Fondos en Parelelas 3 8 1-2 min\n\nDía 3\nMúsculo Ejercicio Series Repeticiones Descanso\nPierna Zancada Mancuerna 3 10 2-3 min\nPecho Press Inclinado Mancuernas 3 8 2-3 min\nEspalda Jalon Polea Supino 3 10 2-3 min\nPierna Sentadilla barra 3 12 2-3 min\nTrapecio Facepull 3 12 1-2 min\nHombro Press Militar 3 8 3-4 min\n\nPierna Curl Femoral 3 10 1-2 min",
+    "campos": {
+      "ejercicios": [
+        {
+          "dia": 1,
+          "musculo": "Pierna",
+          "ejercicio": "Sentadilla Trasera",
+          "series": 3,
+          "repeticiones": 6,
+          "descanso_min": "3-4"
+        },
+        {
+          "dia": 1,
+          "musculo": "Pierna",
+          "ejercicio": "Extensión Cuádriceps",
+          "series": 3,
+          "repeticiones": 12,
+          "descanso_min": "1-2"
+        },
+        {
+          "dia": 1,
+          "musculo": "Pecho",
+          "ejercicio": "Press Banca",
+          "series": 3,
+          "repeticiones": 10,
+          "descanso_min": "2-3"
+        },
+        {
+          "dia": 1,
+          "musculo": "Espalda",
+          "ejercicio": "Peso Muerto",
+          "series": 3,
+          "repeticiones": 10,
+          "descanso_min": "2-3"
+        },
+        {
+          "dia": 1,
+          "musculo": "Biceps",
+          "ejercicio": "Curl Biceps Mancuerna",
+          "series": 3,
+          "repeticiones": 10,
+          "descanso_min": "1-2"
+        },
+        {
+          "dia": 1,
+          "musculo": "Triceps",
+          "ejercicio": "Press francés",
+          "series": 3,
+          "repeticiones": 12,
+          "descanso_min": "1-2"
+        },
+        {
+          "dia": 2,
+          "musculo": "Espalda",
+          "ejercicio": "Peso Muerto Rumano",
+          "series": 3,
+          "repeticiones": 5,
+          "descanso_min": "3-4"
+        },
+        {
+          "dia": 2,
+          "musculo": null,
+          "ejercicio": "Elevación Lateral",
+          "series": 3,
+          "repeticiones": 10,
+          "descanso_min": "1-2"
+        },
+        {
+          "dia": 2,
+          "musculo": "Espalda",
+          "ejercicio": "Remo Barra T",
+          "series": 3,
+          "repeticiones": 12,
+          "descanso_min": "2-3"
+        },
+        {
+          "dia": 2,
+          "musculo": "Pierna",
+          "ejercicio": "Elevación Gemelos de Pie",
+          "series": 3,
+          "repeticiones": 10,
+          "descanso_min": "1-2"
+        },
+        {
+          "dia": 2,
+          "musculo": "Pecho",
+          "ejercicio": "Aperturas Polea",
+          "series": 3,
+          "repeticiones": 12,
+          "descanso_min": "1-2"
+        },
+        {
+          "dia": 2,
+          "musculo": "Abdomina",
+          "ejercicio": "Crunch Abdominal",
+          "series": 3,
+          "repeticiones": 12,
+          "descanso_min": "1"
+        },
+        {
+          "dia": 2,
+          "musculo": "Tríceps",
+          "ejercicio": "Fondos en Parelelas",
+          "series": 3,
+          "repeticiones": 8,
+          "descanso_min": "1-2"
+        },
+        {
+          "dia": 3,
+          "musculo": "Pierna",
+          "ejercicio": "Zancada Mancuerna",
+          "series": 3,
+          "repeticiones": 10,
+          "descanso_min": "2-3"
+        },
+        {
+          "dia": 3,
+          "musculo": "Pecho",
+          "ejercicio": "Press Inclinado Mancuernas",
+          "series": 3,
+          "repeticiones": 8,
+          "descanso_min": "2-3"
+        },
+        {
+          "dia": 3,
+          "musculo": "Espalda",
+          "ejercicio": "Jalon Polea Supino",
+          "series": 3,
+          "repeticiones": 10,
+          "descanso_min": "2-3"
+        },
+        {
+          "dia": 3,
+          "musculo": "Pierna",
+          "ejercicio": "Sentadilla barra",
+          "series": 3,
+          "repeticiones": 12,
+          "descanso_min": "2-3"
+        },
+        {
+          "dia": 3,
+          "musculo": "Trapecio",
+          "ejercicio": "Facepull",
+          "series": 3,
+          "repeticiones": 12,
+          "descanso_min": "1-2"
+        },
+        {
+          "dia": 3,
+          "musculo": "Hombro",
+          "ejercicio": "Press Militar",
+          "series": 3,
+          "repeticiones": 8,
+          "descanso_min": "3-4"
+        },
+        {
+          "dia": 3,
+          "musculo": "Pierna",
+          "ejercicio": "Curl Femoral",
+          "series": 3,
+          "repeticiones": 10,
+          "descanso_min": "1-2"
+        }
+      ]
+    },
+    "avisos": []
+  },
+  {
+    "documento": "tasas_instalaciones",
+    "titulo": "Ordenanza de tasas de instalaciones deportivas y piscinas",
+    "paginas": [
+      "pagina_1.png",
+      "pagina_2.png",
+      "pagina_3.png",
+      "pagina_4.png"
+    ],
+    "texto": "TASA POR UTILISACION DE LOS SERVICIOS DE INSTALACIONES\nDEPORTIVAS Y PISCINAS\n\nFUNDAMENTO LEGAL Y OBJETO\n\nArtículo 1. Ejerciendo la facultad reconocida en el art. 20 de la Ley 39/1988 de 30 de\ndiciembre: y dando cumplimiento a lo dispuesto en los artículos 15 a 19 de la propia Ley\nReguladora de las Haciendas Locales se establece, en este término municipal, una tasa por\nla utilización de los servicios de instalaciones deportivas y piscinas.\n\nArtículo 2. El objeto de esta tasa lo constituye la utilización de los servicios o realización de\nactividades en instalaciones deportivas y piscinas\n\nDEVENGO\n\nArtículo 3. La Tasa se devenga cuando se solicite la utilización de la Instalación Deportiva\nMunicipal:\n\n3.1. Utilización no periódica: El importe de la Tasa deberá ser satistecho por adelantado,\nmediante el abono de recibo específico o en efectivo.\n\n3.2. Utilización periódica: Se facilitará el pago mediante recibo trimestral a través de\ndomiciliación en entidad bancaria autorizada. La falta de pago de cualquiera de las cuotas\noriginará la suspensión de la prestación del servicio, además de la apertura del\nprocedimiento recaudatorio ejecutivo y baja en el trimestre natural siguiente. En los casos de\nalta como abonados a piscinas deberá pagarse la cuota de alta correspondiente que se\nespecifica y el numero de mensualidades que restan para acabar el trimestre natural,\nincluido el de alta.\n\nEl pago de la tasa por utilización del gimnasio, se realizará de forma conjunta con la tasa\ncorrespondiente al abono por utilización de las piscinas.\n\nSUJETOS PASIVOS\n\nArtículo 4. Son sujetos pasivos de esta tasa las personas naturales o jurídicas usuarios de tales\ninstalaciones o servicios\n\nCUOTA\n\nArtículo 5.1. Utilización de las piscinas:\nABONADOS\nIndividuales\n\nMensu Trimestral\nTramo Edad al 19, 2 y 491. 391 Cuota de Alta\nHasta los 6 años Gratis Gratis Gratis Gratis\n*Asociados a un adulto\nDe más de 6 a 12 años 10,20 € 30,60 € 15,30 € 15,30€\n*Asociados a un adulto\nDe más de 12 a 26 años 12,30 € 36,90 € 18,45 € 18,45 €\nMás de 26 años 14,70€ 44,10 € 22,05 € 22,05 €\n\nPensionistas y mayores de 65 años 10,20 € 30,60 € 15,30 € 15,30 €\n\nFamiliares\n\n. Trimestral\nNúmero Miembros Mensual 19,2% y 491 esto 31 Cuota de Alta\n2 Miembros 24,80 € 74,40 € 37,20 € 37,20 €\n3 Miembros 32,80 € 98,40 € 49,20 € 49,20 €\n4 Miembros 39,40 € 118,20 € 60,10 € 60,10 €\n$ Miembros o más 44,80 € 134,40 € 67,20 € 67,20 €\n\nPodrán formar parte del abono familiar el cónyuge y parientes hasta el 2% grado de\nconsanguinidad y 1% de afinidad que convivan con el titular del abono y dependan\neconómicamente de este. A estos efectos se entenderá que dependen económicamente\nsegún lo establecido en el Impuesto de la Renta de las Personas Físicas.\n\nEn el Abono Familiar no podrá incluirse los hijos que hayan cumplido los 25 años de edad,\nexcepto que tengan alguna minusvalía que les impidan el desarrollo de una actividad\nlaboral.\n\nLos abonados que deseen causar baja o realizar variaciones deberán comunicarlo por\nescrito en la oficina de la piscina cubierta, y causarán efecto en el trimestre natural\nsiguiente.\n\nLos abonados que deseen causar baja en la utilización de la instalación del gimnasio,\ndeberán comunicarlo por escrito en las dependencias de la piscina cubierta y causará\nefecto en el trimestre natural siguiente\n\nEntradas\nDías laborables Sábado, domingo y festivos\nDe más de 6 a 12 años 2,.10€ 3,20 €\nDe más de 12 a 26 años 3,20 € 420€\nMás de 2é6años 420€ 5,30 €\n\nBonos de 10 Baños\n\nDe más de 6 a 12 años 15,75 €\nDe más de 12 a 26 años 21,00 €\nMás de 26 años 26,25 €\n\nBonos Piscina Verano\n\nDe más de 6 a 12 años 38,85 €\n*asociados a un adulto\n\nDe más de 12 a 26 años 46,20 €\nMás de 26 años 49,35 €\nFamiliar 2 miembros 84,00 €\nFamiliar 3 miembros 109,20 €\nFamiliar 4 miembros 130,20 €\nFamiliar 5 miembros 147,00 €\n\nGrupos relacionados con actividades\nmunicipales especiales con abono de Gratuito\n\nPara la acreditación de las condiciones de edad que generan tipos de tarifa diferenciados,\npodrá exigirse por el personal de servicio la presentación in situ de documento acreditativo\nsuficiente de las mismas (D.N.I.. carnet conducir, ...), siendo su presentación inexcusable para\nla concesión del servicio en tal caso.\n\nPara la acreditación de la condición de pensionista que genera tipo de tarifa específico, se\nexigirá, además de la acreditación personal del mismo (D.N.I.. Carnet de conducir,....), la\npresentación in situ de documento acreditativo de la condición de perceptor de\nprestaciones económicas periódicas contributivas o no, entendiendo por tales cualquiera\nde los que a continvación se relacionan, siendo su presentación inexcusable para la\nconcesión del servicio en tal caso.\n\ne Comunicación escrita de la Seguridad Social acreditativa de la condición de\npensionista del solicitante Cartilla de la Seguridad Social donde aparezca el titular y\nlas personas a su cargo, entre las que figure el solicitante,\n\n* Cartilla individual de la Seguridad Social donde el solicitante tenga la condición de\npensionista o documento similar expedido por MUFACE.\n\ne Certificados acreditativos de minusvalía o discapacidad del solicitante con\npercepción de prestación económica expedidos por el ASS.\n\nNo se permitirá la entrada a menores de 12 años sin la compañía de un adulto responsable.\n\nLa pérdida, robo o deterioro del carnet de abono que dé lugar a la extensión de nueva\nacreditación llevará consigo el abono de 6,00 euros. La solicitud de nuevo carnet se\nrealizará mediante escrito motivado presentado en las oficinas centrales del Servicio de\nInstalaciones Deportivas.\n\nUtilización de Gimnasio\n\nLos abonados a la piscina cubierta podrán utilizar la instalación del gimnasio pagando una\ncuota adicional de 22,05 € al mes.\n\nGimnasio en horario reducido:\n-De 7,00 horas a 17,00 horas p.m. (lunes a viernes) y fines de semana 18,40 €/mes\n\nUtilización de la sauna\n\nLos abonados a la piscina cubierta podrán utilizar la instalación de la sauna, una vez\nsatisfechas las siguientes tarifas:\n\n- 1 entrada\n\n- Bono de 10 entradas ..\n\n. 220€\n.. 16,30 €\n\nArtículo 5.2 Utilización del resto de instalaciones deportivas\n\nLas Asociaciones Deportivas podrán utilizar las instalaciones deportivas abonando las\ncantidades que para éstas se describen en este apartado, de acuerdo con las siguientes\nnormas:\n\nNo se permitirá:\na) Ceder o alquilar a terceros los espacios deportivos reservados.\n\nb) La utilización de los espacios deportivos para la práctica de actividades o\nmodalidades debortivas distintas al uso concebido. salvo autorización expresa.\n\nArtículo 5.2.4 Tarifas Ufilización de los tatamis o boulder (rocódromo)\n\nNo abonados Clubes y a ción\n\nAbonados a la Instalación a la Entidades No\nInstalación Asociadas con cbono de\n\n1,50 €/hora 5,30 €/hora 9.50 €/hora 3,20 €/hora\n\nDEVOLUCIÓN\n\nArtículo 6. Caso de no poder prestarse el servicio por causa imputable al Ayuntamiento, les\nserá devuelto el importe satisfecho, no teniendo derecho a indemnización alguna. En caso\nde ser imputable al usuario no tendrá derecho a devolución.\n\nINFRACCIONES Y DEFRAUDACIÓN\nArtículo 7. En todo lo relativo a infracciones, sus distintas calificaciones, así como las\nsanciones que a las mismas puedan corresponder, y procedimiento sancionador se estará a\nlo que dispone la Ordenanza General de Gestión Recaudación e Inspección de este\nAyuntamiento y subsidiariamente la Ley General Tributaria, todo ello sin perjuicio de en cuan-\ntas otras responsabilidades civiles o penales puedan incurrir los infractores.\nBONIFICACIONES FAMILIA NUMEROSA\n\nArtículo 8. Las familias numerosas, definidas según lo dispuesto en la Ley 40/3003, de 18 de\nnoviembre de Protección a las Familias Numerosas, tendrán un descuento de un 25% en\ntodas las tarifas recogidas en esta Ordenanza.\n\nPara la obtención de dicha bonificación deberá presentarse el original del título oficial de\nfamilia numerosa.\n\nVIGENCIA\n\nLa presente Ordenanza comenzará a regir desde el día 01 de enero de 2012 y permanecerá\nvigente, sin interrupción en tanto no se acuerde su modificación o derogación.\n\nAPROBACIÓN\n\nLa presente Ordenanza fue aprobado, con carácter definitivo el día 21 de diciembre de\n2011, publicada en el BOP n* 298 de fecha 30 de diciembre de 2011.",
+    "campos": {
+      "importe": [
+        10.2,
+        30.6,
+        15.3,
+        12.3,
+        36.9,
+        18.45,
+        14.7,
+        44.1,
+        22.05,
+        24.8,
+        74.4,
+        37.2,
+        32.8,
+        98.4,
+        49.2,
+        39.4,
+        118.2,
+        60.1,
+        44.8,
+        134.4,
+        67.2,
+        3.2,
+        5.3,
+        15.75,
+        21.0,
+        26.25,
+        38.85,
+        46.2,
+        49.35,
+        84.0,
+        109.2,
+        130.2,
+        147.0,
+        6.0,
+        18.4,
+        16.3,
+        1.5
+      ],
+      "fecha": [
+        "2012-01-01",
+        "2011-12-21",
+        "2011-12-30"
+      ],
+      "hora": [
+        "07:00",
+        "17:00"
+      ],
+      "articulo": [
+        "1",
+        "20",
+        "2",
+        "3",
+        "4",
+        "5.1",
+        "5.2",
+        "5.2.4",
+        "6",
+        "7",
+        "8"
+      ],
+      "ley": [
+        "39/1988"
+      ],
+      "edad": [
+        6,
+        12,
+        26,
+        65,
+        25
+      ]
+    },
+    "avisos": [
+      "importe sin decimales (coma perdida en el OCR): '420€'",
+      "importe sin decimales (coma perdida en el OCR): '420€'",
+      "importe sin decimales (coma perdida en el OCR): '220€'",
+      "año de ley imposible: 'Ley 40/3003'"
+    ]
+  },
+  {
+    "documento": "vestuarios_taquillas",
+    "titulo": "Reglamento de instalaciones deportivas: vestuarios, duchas y taquillas",
+    "paginas": [
+      "pagina_1.png",
+      "pagina_2.png",
+      "pagina_3.png"
+    ],
+    "texto": "Artículo 36. Vestuarios y duchas\n\nCon carácter general, para el uso de los vestuarios de las IDM deberá cumplirse la siguiente\nnormativa:\n\na) Los vestuarios de la instalación deportiva están a disposición de los usuarios, con\nla observancia de un uso correcto y respetuoso del equipamiento.\n\nb) En beneficio de una adecuada utilización de los espacios deportivos, se deberá\natender las indicaciones del personal encargado en todo momento.\n\nc) El uso de los vestuarios será exclusivamente para los participantes en una actividad\nfísica o deportiva vinculada a una reserva.\n\nd) Su utilización implica el respeto, orden y cuidado del espacio. Una vez finalizado su\nuso, se dejará en condiciones de poder ser utilizado por otras personas usuarias.\n\ne) En caso de que no existan vestuarios específicos al efecto, los menores de hasta seis\naños podrán acceder al vestuario del sexo opuesto, debidamente acompañados por\npersona mayor de edad que ejerza la patria potestad, tutela o guarda del mismo, a fin\nde realizar las funciones de aseo y vestido, de acuerdo con las normas específicas que\na este efecto establezca la Concejalía de Deportes Excmo. Ayuntamiento de Alicante.\n\nf) Para cursos, escuelas o entrenamiento de club, se podrá hacer uso de los vestuarios\ncomo máximo 15 minutos antes del inicio de la actividad y 15 minutos después.\n\ng) En vestuarios colectivos será necesaria la presencia de un responsable de entidad que\nsolicite la llave de acceso a la entrada y revise el correcto estado del vestuario a la\nsalida.\n\nSe recomienda:\n\na) La utilización de chanclas y evitar desplazamientos con pies descalzos.\n\nb) Tener precaución sobre el material individual (toallas, chanclas, peines)\ndesaconsejando su intercambio, así como evitar el contacto de dicho material con el\nsuelo.\n\nCc) No dejar objetos personales o de valor. La Concejalía de Deportes no se hace\nresponsable de la ropa u objetos que puedan extraviarse.\n\nNo se permite:\n\nd) En vestuarios colectivos, no se permiten reuniones de personas ajenas a los\ncomponentes del equipo.\ne) El uso de reproductores de música dentro de los vestuarios.\n\nf) Afeitarse, así como realizar cualquier tipo de depilación o tratamiento corporal en\nvestuarios, duchas o aseos.\n\n9) Comer en ningún espacio de la instalación ni en la zona de vestuarios.\n\nh) Abandonar desperdicios, papeles o residuos en las instalaciones, debiendo utilizar\nlas papeleras u otros recipientes destinados al efecto.\n\ni) Por razones de seguridad no está permitida la introducción de recipientes de vidrio\no material cortante en las zonas de duchas y vestuarios.\n\n¡) En ningún caso, podrán acceder menores de edad sin que esté presente en la\ninstalación el tutor/a, entrenador/a o persona responsable del grupo.\n\nk) La entrada de animales.\n1) Por razones de convivencia quedan prohibidos los juegos molestos o peligrosos.\nm) Comer dentro de la zona de vestuarios.\n\nArtículo 37. En las Instalaciones Deportivas Municipales con taquillas.\n\na) Podrán existir taquillas a disposición de los usuarios para guardar ropa u objetos\npersonales. Las taquillas serán individuales y estarán ubicadas en vestuarios o\npasillos de determinadas instalaciones deportivas.\n\nb) Las taquillas serán de uso diario y no exclusivo. El personal municipal de la\ninstalación proporcionará la taquilla al usuario, sin que este pueda exigir el uso de\nuna en concreto, debiendo utilizar aquella que sea proporcionada por el susodicho\npersonal. Ningún usuario podrá bloquear una taquilla más que el necesario para\nsu uso en el momento en que se encuentre realizando la actividad. Las taquillas se\nrevisarán diariamente y en caso de encontrarse alguna ocupada, los objetos\ndepositados serán almacenados en conserjería. En caso de identificar a la\npersona usuaria que haya incumplido la obligación de desalojo podrá ser\namonestada.\n\nc) En caso de requerir la apertura de una taquilla por pérdida del candado, o llave\nse procederá al mismo rompiendo el candado, siempre y cuando el usuario\npueda acreditar que el contenido de la misma es suyo.\n\nd) La Concejalía de Deportes de Alicante no se hace responsable de las posible\nextracciones en taquillas que se puedan denunciar.",
+    "campos": {
+      "articulo": [
+        "36",
+        "37"
+      ]
+    },
+    "avisos": []
+  }
+]
