@@ -1,0 +1,7 @@
+# Webhook
+fastapi
+uvicorn[standard]
+python-dotenv
+
+# Consulta documental con modelo de lenguaje (Sesión 4)
+google-genai

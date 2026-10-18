@@ -1,0 +1,108 @@
+{
+  "id": "d8f38317-dce0-59a6-b87a-97a4e4b3b39f",
+  "name": "reservar_clase - corregir_dni",
+  "auto": true,
+  "contexts": [
+    "ctx_reserva_en_curso"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "reservar_clase.corregir_dni",
+      "affectedContexts": [
+        {
+          "name": "ctx_reserva_en_curso",
+          "lifespan": 5
+        },
+        {
+          "name": "reservar_clase-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "444e1bf2-b132-5a6b-9f5d-ae1e462e1146",
+          "name": "dni",
+          "required": true,
+          "dataType": "@dni",
+          "value": "$dni",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "es",
+              "value": "<speak>Dime tu DNI: <break time=\"200ms\"/>los ocho números y la letra.</speak>"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "96c173a1-7dca-5d0e-89f2-0ee34d04345c",
+          "name": "clase",
+          "required": false,
+          "dataType": "@clase",
+          "value": "#ctx_reserva_en_curso.clase",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "86fb52e6-61a7-5283-8e63-70a8027feb0f",
+          "name": "fecha",
+          "required": false,
+          "dataType": "@sys.date",
+          "value": "#ctx_reserva_en_curso.fecha",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "460646a7-c86a-5a9f-89b9-b55eadafb3bd",
+          "name": "hora",
+          "required": false,
+          "dataType": "@sys.time",
+          "value": "#ctx_reserva_en_curso.hora",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "es",
+          "speech": [
+            "No he podido comprobar el DNI ahora mismo. Inténtalo de nuevo en unos minutos."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

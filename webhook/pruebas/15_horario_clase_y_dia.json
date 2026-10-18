@@ -1,0 +1,16 @@
+{
+  "session": "projects/gimnasio-atlas/agent/sessions/prueba-curl",
+  "queryResult": {
+    "queryText": "¿A qué hora hay spinning el martes?",
+    "parameters": {
+      "clase": "spinning",
+      "fecha": "2026-11-03T12:00:00+01:00"
+    },
+    "allRequiredParamsPresent": true,
+    "intent": {
+      "displayName": "consultar_horario"
+    },
+    "outputContexts": [],
+    "languageCode": "es"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "session": "projects/gimnasio-atlas/agent/sessions/prueba-curl",
+  "queryResult": {
+    "queryText": "Quiero reservar yoga",
+    "parameters": {
+      "clase": "yoga",
+      "fecha": "",
+      "hora": "",
+      "dni": ""
+    },
+    "allRequiredParamsPresent": false,
+    "intent": {
+      "displayName": "reservar_clase"
+    },
+    "outputContexts": [],
+    "languageCode": "es"
+  }
+}

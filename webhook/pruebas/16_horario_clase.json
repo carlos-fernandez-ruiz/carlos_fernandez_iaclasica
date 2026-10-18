@@ -1,0 +1,16 @@
+{
+  "session": "projects/gimnasio-atlas/agent/sessions/prueba-curl",
+  "queryResult": {
+    "queryText": "¿Qué horario tiene yoga?",
+    "parameters": {
+      "clase": "yoga",
+      "fecha": ""
+    },
+    "allRequiredParamsPresent": true,
+    "intent": {
+      "displayName": "consultar_horario"
+    },
+    "outputContexts": [],
+    "languageCode": "es"
+  }
+}

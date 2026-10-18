@@ -1,0 +1,13 @@
+{
+  "session": "projects/gimnasio-atlas/agent/sessions/prueba-curl",
+  "queryResult": {
+    "queryText": "¿Se puede entrar con chanclas?",
+    "parameters": {},
+    "allRequiredParamsPresent": true,
+    "intent": {
+      "displayName": "consulta_documental"
+    },
+    "outputContexts": [],
+    "languageCode": "es"
+  }
+}

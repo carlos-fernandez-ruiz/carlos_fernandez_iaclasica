@@ -98,7 +98,7 @@
             },
             {
               "lang": "es",
-              "value": "<speak>No he podido entender el DNI. <break time=\"200ms\"/>Dímelo de nuevo, por ejemplo: <say-as interpret-as=\"characters\">12345678Z</say-as>.</speak>"
+              "value": "<speak>Por último, ¿me dices tu DNI? <break time=\"200ms\"/>Los ocho números y la letra.</speak>"
             }
           ],
           "promptMessages": [],

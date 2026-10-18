@@ -1,0 +1,222 @@
+[
+  {
+    "id": "9f42252d-0984-517b-acd7-839b15418634",
+    "data": [
+      {
+        "text": "12345678Z",
+        "meta": "@dni",
+        "alias": "dni",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "7b4c9db6-a9b5-530e-a595-995c48cb76b7",
+    "data": [
+      {
+        "text": "Mi DNI es ",
+        "userDefined": false
+      },
+      {
+        "text": "12345678Z",
+        "meta": "@dni",
+        "alias": "dni",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "21b7de15-ba2f-5e4b-b8d5-22153053f55b",
+    "data": [
+      {
+        "text": "Es el ",
+        "userDefined": false
+      },
+      {
+        "text": "87654321X",
+        "meta": "@dni",
+        "alias": "dni",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "fefcad3a-d00e-5c15-b552-672c9ab5b6d1",
+    "data": [
+      {
+        "text": "Perdona, el DNI es ",
+        "userDefined": false
+      },
+      {
+        "text": "12.345.678 Z",
+        "meta": "@dni",
+        "alias": "dni",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "60c0bd17-1d57-5892-a1f8-e4655d9e5d96",
+    "data": [
+      {
+        "text": "Te lo repito: ",
+        "userDefined": false
+      },
+      {
+        "text": "11111111H",
+        "meta": "@dni",
+        "alias": "dni",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "250de3ab-00d2-5f9b-9960-e8f9cd938d7e",
+    "data": [
+      {
+        "text": "12345678-Z",
+        "meta": "@dni",
+        "alias": "dni",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "e6c3a7cb-8c18-5438-9c7b-36041e45c3e4",
+    "data": [
+      {
+        "text": "12345678 z",
+        "meta": "@dni",
+        "alias": "dni",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "8ed62388-6772-508f-a9b0-2c1c10b54a02",
+    "data": [
+      {
+        "text": "El correcto es ",
+        "userDefined": false
+      },
+      {
+        "text": "11111111H",
+        "meta": "@dni",
+        "alias": "dni",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "9daa402a-6f2e-57f9-a3cd-d392e0532c3c",
+    "data": [
+      {
+        "text": "Me he equivocado, es ",
+        "userDefined": false
+      },
+      {
+        "text": "12345678Z",
+        "meta": "@dni",
+        "alias": "dni",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "505ddd59-bdb6-5403-bf87-17f7e77c9d4b",
+    "data": [
+      {
+        "text": "DNI ",
+        "userDefined": false
+      },
+      {
+        "text": "87654321X",
+        "meta": "@dni",
+        "alias": "dni",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "19870c2d-5188-5700-8b24-98bd20bbb00f",
+    "data": [
+      {
+        "text": "No, es ",
+        "userDefined": false
+      },
+      {
+        "text": "11111111H",
+        "meta": "@dni",
+        "alias": "dni",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "6c1e7f69-f378-5bfe-8369-1258a89c8169",
+    "data": [
+      {
+        "text": "Sería ",
+        "userDefined": false
+      },
+      {
+        "text": "12345678Z",
+        "meta": "@dni",
+        "alias": "dni",
+        "userDefined": true
+      },
+      {
+        "text": ", perdona",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  }
+]

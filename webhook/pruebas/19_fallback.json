@@ -1,0 +1,13 @@
+{
+  "session": "projects/gimnasio-atlas/agent/sessions/prueba-curl",
+  "queryResult": {
+    "queryText": "bla bla",
+    "parameters": {},
+    "allRequiredParamsPresent": true,
+    "intent": {
+      "displayName": "Default Fallback Intent"
+    },
+    "outputContexts": [],
+    "languageCode": "es"
+  }
+}

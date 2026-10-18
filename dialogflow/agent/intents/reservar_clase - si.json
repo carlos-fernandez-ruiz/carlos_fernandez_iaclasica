@@ -78,6 +78,48 @@
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
           "outputDialogContexts": []
+        },
+        {
+          "id": "c1760041-6651-5c28-a31f-7700d38e0e7b",
+          "name": "estado",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "#ctx_reserva_en_curso.estado",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "9f2058dd-3287-5aa3-9314-f0274cab89d4",
+          "name": "r_fecha",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "#ctx_reserva_en_curso.r_fecha",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "28269d90-f6bf-5afc-b123-71bf4ac41102",
+          "name": "r_hora",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "#ctx_reserva_en_curso.r_hora",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
         }
       ],
       "messages": [
@@ -87,7 +129,7 @@
           "textToSpeech": "",
           "lang": "es",
           "speech": [
-            "<speak>¡Hecho! Tu clase de $clase está reservada. <break time=\"300ms\"/>¿Puedo ayudarte en algo más?</speak>"
+            "No he podido confirmar la reserva ahora mismo. Inténtalo de nuevo en unos minutos o pásate por recepción."
           ],
           "condition": ""
         }

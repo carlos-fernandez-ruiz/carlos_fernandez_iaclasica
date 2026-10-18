@@ -1,0 +1,21 @@
+{
+  "session": "projects/gimnasio-atlas/agent/sessions/prueba-curl",
+  "queryResult": {
+    "queryText": "Sí",
+    "parameters": {
+      "clase": "yoga",
+      "fecha": "2026-11-02T12:00:00+01:00",
+      "hora": "2026-10-18T09:00:00+02:00",
+      "dni": "12345678A",
+      "estado": "falta_dni",
+      "r_fecha": "",
+      "r_hora": ""
+    },
+    "allRequiredParamsPresent": true,
+    "intent": {
+      "displayName": "reservar_clase - si"
+    },
+    "outputContexts": [],
+    "languageCode": "es"
+  }
+}
