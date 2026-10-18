@@ -1,0 +1,9 @@
+{
+  "id": "0953b10d-a445-5ec2-8e67-2f7e5f5959e1",
+  "name": "dni",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": true,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": false
+}

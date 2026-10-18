@@ -1,0 +1,64 @@
+{
+  "id": "5ac42619-e87a-5c8f-a2b3-f7861af9e1c4",
+  "name": "consultar_horario",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "consultar_horario",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "2ddfc388-fdeb-5134-b3cc-45cad7977ef1",
+          "name": "clase",
+          "required": false,
+          "dataType": "@clase",
+          "value": "$clase",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "75904663-0cf3-522a-a71c-f8496fcaf17e",
+          "name": "fecha",
+          "required": false,
+          "dataType": "@sys.date",
+          "value": "$fecha",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "es",
+          "speech": [
+            "<speak>Tenemos yoga, pilates, spinning, zumba, body pump y HIIT de lunes a sábado. <break time=\"300ms\"/>¿Quieres reservar alguna?</speak>"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "value": "yoga",
+    "synonyms": [
+      "yoga",
+      "yoga flow",
+      "hatha yoga"
+    ]
+  },
+  {
+    "value": "pilates",
+    "synonyms": [
+      "pilates",
+      "pílates"
+    ]
+  },
+  {
+    "value": "spinning",
+    "synonyms": [
+      "spinning",
+      "ciclo indoor",
+      "bici",
+      "bicicleta",
+      "cycling"
+    ]
+  },
+  {
+    "value": "zumba",
+    "synonyms": [
+      "zumba",
+      "baile"
+    ]
+  },
+  {
+    "value": "body pump",
+    "synonyms": [
+      "body pump",
+      "bodypump",
+      "pump",
+      "body pum"
+    ]
+  },
+  {
+    "value": "HIIT",
+    "synonyms": [
+      "HIIT",
+      "hiit",
+      "hit",
+      "jit",
+      "crossfit",
+      "entrenamiento por intervalos"
+    ]
+  }
+]

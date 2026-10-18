@@ -1,0 +1,262 @@
+[
+  {
+    "id": "ed0dbbf3-1bf1-53e6-aac8-d116c7f10df3",
+    "data": [
+      {
+        "text": "¿Se puede entrar con chanclas?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "1729ee2a-156b-5f50-b8dd-82baae476b4f",
+    "data": [
+      {
+        "text": "¿Es obligatorio llevar toalla?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "59353282-de3c-565d-a58c-7091f2aba611",
+    "data": [
+      {
+        "text": "¿Cuáles son las normas del gimnasio?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "e6a51d38-2acd-5995-aa5e-b430266c426f",
+    "data": [
+      {
+        "text": "¿A qué hora abre el gimnasio?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "dae50bfa-bc3b-5ac3-ac57-1b2c6932c768",
+    "data": [
+      {
+        "text": "¿Cuál es el horario de apertura de la instalación?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "e6788fa8-554a-5362-987d-89985fe8d6ba",
+    "data": [
+      {
+        "text": "¿Pueden entrar menores de edad?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "f64aa263-ed32-58a6-a592-7ba6f46b86d2",
+    "data": [
+      {
+        "text": "¿A partir de qué edad se puede usar la sala de musculación?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "a770c7ce-7e32-53e6-9f38-067d5c110fda",
+    "data": [
+      {
+        "text": "¿Cuánto cuesta la cuota mensual?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "a0fd2760-a30a-505f-87e4-40e5b9e159ad",
+    "data": [
+      {
+        "text": "¿Qué tarifas tenéis?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "0357536c-5e2e-51ad-8271-2416d1c26255",
+    "data": [
+      {
+        "text": "¿Hay que usar gorro en la piscina?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "1c196d04-29db-589e-bf3c-b21341f0a9c9",
+    "data": [
+      {
+        "text": "¿Puedo dejar mis cosas en las taquillas?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "9d33ec48-a636-548f-a26c-e51eb8b9b506",
+    "data": [
+      {
+        "text": "¿Se puede comer dentro de la sala?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "136e2104-53a3-5a4c-aae7-27372eca96b6",
+    "data": [
+      {
+        "text": "¿Tengo que limpiar las máquinas después de usarlas?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "53c3eb6d-b4c5-50f5-a809-9a55765a9035",
+    "data": [
+      {
+        "text": "¿Qué pasa si no respeto las normas?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "3b29fea5-6507-55d2-9733-2edb931186c7",
+    "data": [
+      {
+        "text": "¿Qué dice el reglamento sobre la ropa deportiva?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "b86e1d62-0f5c-5d9a-ba9c-72590ca196c6",
+    "data": [
+      {
+        "text": "¿Qué ejercicios tiene el día 1 de la rutina?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "83ca7fdf-104e-532c-8b87-d28ef5930a2b",
+    "data": [
+      {
+        "text": "¿Cuántas series hago de press banca?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "1924de2b-c8ae-5324-9e34-ab207160b157",
+    "data": [
+      {
+        "text": "¿Cuántas repeticiones son de peso muerto rumano?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "ba503334-a501-561c-86b5-922ea9aabee9",
+    "data": [
+      {
+        "text": "¿Cuánto descanso entre series de sentadilla?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "90ee6991-004b-5d75-aab0-3b0687d8c1bb",
+    "data": [
+      {
+        "text": "¿Qué músculos se trabajan el día 3?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  }
+]

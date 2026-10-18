@@ -1,0 +1,106 @@
+{
+  "id": "50c2c018-0f3c-53f4-9a7d-df6b934f7b35",
+  "parentId": "64505a81-20ef-5ce6-982e-5b1a38e72f57",
+  "rootParentId": "64505a81-20ef-5ce6-982e-5b1a38e72f57",
+  "name": "reservar_clase - si",
+  "auto": true,
+  "contexts": [
+    "ctx_reserva_en_curso",
+    "reservar_clase-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "reservar_clase.reservar_clase-si",
+      "affectedContexts": [
+        {
+          "name": "ctx_reserva_en_curso",
+          "lifespan": 0
+        },
+        {
+          "name": "reservar_clase-followup",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [
+        {
+          "id": "39b3e07a-db8b-5550-b6ca-e685ccee1559",
+          "name": "clase",
+          "required": false,
+          "dataType": "@clase",
+          "value": "#ctx_reserva_en_curso.clase",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "67ce5578-adc3-566c-b22c-6c8d785d82dd",
+          "name": "fecha",
+          "required": false,
+          "dataType": "@sys.date",
+          "value": "#ctx_reserva_en_curso.fecha",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "60461257-db52-5bf7-bf70-50bea3e4800c",
+          "name": "hora",
+          "required": false,
+          "dataType": "@sys.time",
+          "value": "#ctx_reserva_en_curso.hora",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "cf17b3f0-b2b0-5d05-b153-e150e143a4a4",
+          "name": "dni",
+          "required": false,
+          "dataType": "@dni",
+          "value": "#ctx_reserva_en_curso.dni",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "es",
+          "speech": [
+            "<speak>¡Hecho! Tu clase de $clase está reservada. <break time=\"300ms\"/>¿Puedo ayudarte en algo más?</speak>"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,0 +1,40 @@
+{
+  "id": "58247225-028f-5864-bb5d-c92fd53c6a29",
+  "name": "Default Welcome Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.welcome",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "es",
+          "speech": [
+            "<speak>¡Hola! Soy el asistente del Gimnasio Atlas. <break time=\"300ms\"/>Puedo reservarte una clase, decirte los horarios o resolver dudas sobre la normativa y tu rutina de entrenamiento. <break time=\"200ms\"/>¿Qué necesitas?</speak>",
+            "<speak>Hola, bienvenido al Gimnasio Atlas. <break time=\"300ms\"/>¿Quieres reservar una clase, consultar horarios o preguntar algo de las normas?</speak>"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "WELCOME"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

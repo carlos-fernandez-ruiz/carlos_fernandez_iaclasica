@@ -1,0 +1,145 @@
+[
+  {
+    "id": "7784a3ff-d9b3-5b5b-93e6-1daa74d659b4",
+    "data": [
+      {
+        "text": "hola",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "61d26a80-7c4a-5d37-a534-900801500478",
+    "data": [
+      {
+        "text": "buenos días",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "afdf6406-38a1-55f2-bbfc-043c0263e09b",
+    "data": [
+      {
+        "text": "buenas tardes",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "058fee9c-74a6-5147-b45c-f6fd84372155",
+    "data": [
+      {
+        "text": "buenas noches",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "f726cb77-bd70-5cf8-b2d1-a4e3abe1b4e0",
+    "data": [
+      {
+        "text": "buenas",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "d8ab8f1f-0491-59a3-b532-905dc8ea96dc",
+    "data": [
+      {
+        "text": "hola, qué tal",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "1d420878-4be1-56dc-a1d1-e0932fd967da",
+    "data": [
+      {
+        "text": "hey",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "ddd740b9-e74d-5436-89de-4549ecff9be2",
+    "data": [
+      {
+        "text": "saludos",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "4800aa67-3699-5371-8361-80c09fb3a35a",
+    "data": [
+      {
+        "text": "hola Atlas",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "517ea684-8c06-5b83-a561-5544477d2720",
+    "data": [
+      {
+        "text": "hola, necesito ayuda",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "861a50a3-a878-5c23-aa55-1d05bc6287ce",
+    "data": [
+      {
+        "text": "qué tal",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "id": "2a7c572e-3c08-5839-8661-f79853a4164e",
+  "name": "Default Fallback Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.unknown",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "es",
+          "speech": [
+            "Perdona, no te he entendido. ¿Puedes repetirlo?",
+            "No estoy seguro de haberte entendido. Puedo reservar clases, darte horarios o resolver dudas de la normativa.",
+            "¿Cómo dices? Repítemelo con otras palabras, por favor."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": true,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

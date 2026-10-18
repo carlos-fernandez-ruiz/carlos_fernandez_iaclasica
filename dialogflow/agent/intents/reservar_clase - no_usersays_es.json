@@ -1,0 +1,132 @@
+[
+  {
+    "id": "338b7a89-6372-57ba-b9ac-17c17f4a7bd2",
+    "data": [
+      {
+        "text": "no",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "bcf1b6ee-1a99-506c-b00c-0e17bea03298",
+    "data": [
+      {
+        "text": "no, gracias",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "beb725f7-8753-5700-a9c8-37ecb632b9f3",
+    "data": [
+      {
+        "text": "mejor no",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "54c5b51c-da8e-5880-815e-d8fd61fd02eb",
+    "data": [
+      {
+        "text": "cancela",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "ea4a6fce-be78-583d-bad8-cf5d7ba653f0",
+    "data": [
+      {
+        "text": "cancélala",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "9a647439-bd6e-5a39-ac5a-2d47acac24cc",
+    "data": [
+      {
+        "text": "déjalo",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "db8bda6d-5074-545c-b243-a8b734acd479",
+    "data": [
+      {
+        "text": "no la quiero",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "a790b371-ba22-5004-af0f-edd930387fdb",
+    "data": [
+      {
+        "text": "todavía no",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "e5f16df2-f487-530a-9607-eae21f60a2de",
+    "data": [
+      {
+        "text": "no es correcto",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "bfc6c486-2d76-5456-98b8-e994da090dd3",
+    "data": [
+      {
+        "text": "olvídalo",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  }
+]

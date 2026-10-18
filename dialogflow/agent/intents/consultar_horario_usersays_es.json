@@ -1,0 +1,284 @@
+[
+  {
+    "id": "84c78732-d02e-5f0b-9fee-0a4216f1bf97",
+    "data": [
+      {
+        "text": "¿Qué horario tiene ",
+        "userDefined": false
+      },
+      {
+        "text": "yoga",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "29829646-4785-5f50-b359-b1c31dae446b",
+    "data": [
+      {
+        "text": "¿A qué hora hay ",
+        "userDefined": false
+      },
+      {
+        "text": "spinning",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "el martes",
+        "meta": "@sys.date",
+        "alias": "fecha",
+        "userDefined": true
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "c837a290-c648-514b-843a-9103c4868434",
+    "data": [
+      {
+        "text": "¿Cuándo hay clases de ",
+        "userDefined": false
+      },
+      {
+        "text": "pilates",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "258f95b9-1766-51d9-b2ee-ad5793170eee",
+    "data": [
+      {
+        "text": "Horario de ",
+        "userDefined": false
+      },
+      {
+        "text": "zumba",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "eebd2842-8dca-53b4-bc17-9593a0c619db",
+    "data": [
+      {
+        "text": "¿Qué clases hay ",
+        "userDefined": false
+      },
+      {
+        "text": "mañana",
+        "meta": "@sys.date",
+        "alias": "fecha",
+        "userDefined": true
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "7b78da03-41ec-5bd5-b11f-352845883e28",
+    "data": [
+      {
+        "text": "¿Qué clases tenéis ",
+        "userDefined": false
+      },
+      {
+        "text": "el lunes",
+        "meta": "@sys.date",
+        "alias": "fecha",
+        "userDefined": true
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "4a80e3b3-a7c6-5934-9953-83e4ffbd8ac7",
+    "data": [
+      {
+        "text": "Dime los horarios de las clases",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "0c7da7c4-22ea-5f3a-b47e-8bbb1405c25d",
+    "data": [
+      {
+        "text": "¿Hay ",
+        "userDefined": false
+      },
+      {
+        "text": "body pump",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "el viernes",
+        "meta": "@sys.date",
+        "alias": "fecha",
+        "userDefined": true
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "9ba896b9-a029-5a4c-b9ff-d3dd299644c1",
+    "data": [
+      {
+        "text": "¿A qué hora es ",
+        "userDefined": false
+      },
+      {
+        "text": "HIIT",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "a1e7fa0b-5180-5e85-b9bb-ca44f6bf7dff",
+    "data": [
+      {
+        "text": "¿Qué días hay ",
+        "userDefined": false
+      },
+      {
+        "text": "ciclo indoor",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "9dbb0406-0a6f-593d-bf92-014976932d57",
+    "data": [
+      {
+        "text": "Quiero saber el horario de las clases dirigidas",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "237a6160-4e5c-5596-9abf-9cf727c6b86c",
+    "data": [
+      {
+        "text": "¿Quedan plazas en ",
+        "userDefined": false
+      },
+      {
+        "text": "yoga",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "el jueves",
+        "meta": "@sys.date",
+        "alias": "fecha",
+        "userDefined": true
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  }
+]

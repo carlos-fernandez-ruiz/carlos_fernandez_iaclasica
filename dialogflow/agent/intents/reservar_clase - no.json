@@ -1,0 +1,50 @@
+{
+  "id": "9816f975-6324-5c89-b8ef-b5c5cc50cf75",
+  "parentId": "64505a81-20ef-5ce6-982e-5b1a38e72f57",
+  "rootParentId": "64505a81-20ef-5ce6-982e-5b1a38e72f57",
+  "name": "reservar_clase - no",
+  "auto": true,
+  "contexts": [
+    "ctx_reserva_en_curso",
+    "reservar_clase-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "reservar_clase.reservar_clase-no",
+      "affectedContexts": [
+        {
+          "name": "ctx_reserva_en_curso",
+          "lifespan": 0
+        },
+        {
+          "name": "reservar_clase-followup",
+          "lifespan": 0
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "es",
+          "speech": [
+            "<speak>De acuerdo, <break time=\"200ms\"/>no hago la reserva. ¿Te ayudo con otra cosa?</speak>",
+            "<speak>Sin problema, la cancelo. <break time=\"200ms\"/>¿Necesitas algo más?</speak>"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

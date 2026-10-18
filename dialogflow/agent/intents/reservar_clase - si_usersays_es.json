@@ -1,0 +1,158 @@
+[
+  {
+    "id": "a23950b2-5195-5a7d-86cb-c5012dfbf383",
+    "data": [
+      {
+        "text": "sí",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "bd5d5d15-15fb-5498-9681-39deac3739ef",
+    "data": [
+      {
+        "text": "si",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "50bd81e5-c4d6-5787-9a9d-40e742be3af6",
+    "data": [
+      {
+        "text": "sí, confírmala",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "d9b659bc-70d5-531a-ad73-2ad2df629722",
+    "data": [
+      {
+        "text": "vale",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "79d9402a-7cf0-56e5-aedf-4d6ead7998ca",
+    "data": [
+      {
+        "text": "de acuerdo",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "7e69083b-5317-5d0a-aa39-c5deaca2cd72",
+    "data": [
+      {
+        "text": "adelante",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "3ecc9177-7fda-5986-848c-44826ae8a92a",
+    "data": [
+      {
+        "text": "perfecto",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "3eed2a5f-024e-5aec-b4ac-f3c3cac0040f",
+    "data": [
+      {
+        "text": "claro",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "178ac86d-b758-56a0-8ac0-5ed247852ba0",
+    "data": [
+      {
+        "text": "correcto",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "33d4090a-fd88-55fc-ab1f-b35d4f314013",
+    "data": [
+      {
+        "text": "sí, por favor",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "b6709d43-cb29-5355-97db-bc1e5d0b7961",
+    "data": [
+      {
+        "text": "confirmo",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "65886530-f646-57da-99e5-010976e1b354",
+    "data": [
+      {
+        "text": "eso es",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  }
+]

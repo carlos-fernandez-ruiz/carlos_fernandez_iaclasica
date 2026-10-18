@@ -1,0 +1,133 @@
+{
+  "id": "64505a81-20ef-5ce6-982e-5b1a38e72f57",
+  "name": "reservar_clase",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "reservar_clase",
+      "affectedContexts": [
+        {
+          "name": "ctx_reserva_en_curso",
+          "lifespan": 5
+        },
+        {
+          "name": "reservar_clase-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "id": "ace58f37-b8e5-5f75-9df5-ab16d96053e6",
+          "name": "clase",
+          "required": true,
+          "dataType": "@clase",
+          "value": "$clase",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "es",
+              "value": "¿A qué clase quieres apuntarte? Tenemos yoga, pilates, spinning, zumba, body pump y HIIT."
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "7dc73cf4-3ccd-5cd0-ae46-138d26f1833f",
+          "name": "fecha",
+          "required": true,
+          "dataType": "@sys.date",
+          "value": "$fecha",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "es",
+              "value": "¿Qué día quieres venir a $clase?"
+            },
+            {
+              "lang": "es",
+              "value": "¿Para qué día quieres la clase de $clase?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "171322c2-001b-5255-af0b-2a36b6886192",
+          "name": "hora",
+          "required": true,
+          "dataType": "@sys.time",
+          "value": "$hora",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "es",
+              "value": "¿A qué hora te viene bien?"
+            },
+            {
+              "lang": "es",
+              "value": "¿Y a qué hora?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "044b93a3-4b84-5ca6-a2a5-569bbf03e663",
+          "name": "dni",
+          "required": true,
+          "dataType": "@dni",
+          "value": "$dni",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [
+            {
+              "lang": "es",
+              "value": "<speak>Para terminar, dime tu DNI: <break time=\"200ms\"/>los ocho números y la letra.</speak>"
+            },
+            {
+              "lang": "es",
+              "value": "<speak>No he podido entender el DNI. <break time=\"200ms\"/>Dímelo de nuevo, por ejemplo: <say-as interpret-as=\"characters\">12345678Z</say-as>.</speak>"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "es",
+          "speech": [
+            "<speak>Muy bien: clase de $clase, a nombre del DNI <say-as interpret-as=\"characters\">$dni</say-as>. <break time=\"300ms\"/>¿Confirmo la reserva?</speak>"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": true,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

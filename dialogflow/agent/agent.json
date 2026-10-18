@@ -1,0 +1,33 @@
+{
+  "description": "Asistente de voz del Gimnasio Atlas: reserva de clases dirigidas y consulta de normativa y rutinas.",
+  "language": "es",
+  "shortDescription": "",
+  "examples": "",
+  "linkToDocs": "",
+  "displayName": "Gimnasio-Atlas",
+  "disableInteractionLogs": false,
+  "disableStackdriverLogs": false,
+  "defaultTimezone": "Europe/Madrid",
+  "webhook": {
+    "url": "",
+    "username": "",
+    "headers": {
+      "X-Tunnel-Skip-AntiPhishing-Page": "true"
+    },
+    "available": false,
+    "useForDomains": false,
+    "cloudFunctionsEnabled": false,
+    "cloudFunctionsInitialized": false
+  },
+  "isPrivate": true,
+  "mlMinConfidence": 0.3,
+  "supportedLanguages": [],
+  "enableOnePlatformApi": true,
+  "onePlatformApiVersion": "v2beta1",
+  "analyzeQueryTextSentiment": false,
+  "enabledKnowledgeBaseNames": [],
+  "knowledgeServiceConfidenceAdjustment": 0.0,
+  "dialogBuilderMode": false,
+  "baseActionPackagesUrl": "",
+  "enableSpellCorrection": false
+}

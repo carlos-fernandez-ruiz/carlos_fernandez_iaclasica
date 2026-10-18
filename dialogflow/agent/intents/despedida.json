@@ -1,0 +1,36 @@
+{
+  "id": "be827082-b909-52bb-9dce-8c5eadba3728",
+  "name": "despedida",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": true,
+      "action": "despedida",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "es",
+          "speech": [
+            "<speak>¡Gracias por llamar al Gimnasio Atlas! <break time=\"200ms\"/>Que tengas un buen entrenamiento.</speak>",
+            "<speak>Hasta pronto. <break time=\"200ms\"/>¡Nos vemos en el gimnasio!</speak>"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

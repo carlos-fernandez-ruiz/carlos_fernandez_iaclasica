@@ -1,0 +1,491 @@
+[
+  {
+    "id": "959eaeaf-5237-5e33-b806-e98f341fca8a",
+    "data": [
+      {
+        "text": "Quiero reservar una clase",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "a884ce81-b7f1-5a3a-af6d-b695057c2bf0",
+    "data": [
+      {
+        "text": "Me gustaría apuntarme a una clase",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "65e5d36a-3479-5f8e-8b26-4c1cf458222a",
+    "data": [
+      {
+        "text": "Reservar clase",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "10f7c4b8-00d0-5cc3-acfa-05a54220b5ac",
+    "data": [
+      {
+        "text": "Quiero reservar ",
+        "userDefined": false
+      },
+      {
+        "text": "yoga",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "1491f3a5-7b69-5eb0-9417-f28cf0e24e8a",
+    "data": [
+      {
+        "text": "Resérvame ",
+        "userDefined": false
+      },
+      {
+        "text": "spinning",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      },
+      {
+        "text": " para ",
+        "userDefined": false
+      },
+      {
+        "text": "mañana",
+        "meta": "@sys.date",
+        "alias": "fecha",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "4c7698d1-5c4d-58fc-bebc-0e27e20f6d75",
+    "data": [
+      {
+        "text": "Apúntame a ",
+        "userDefined": false
+      },
+      {
+        "text": "pilates",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "el martes",
+        "meta": "@sys.date",
+        "alias": "fecha",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "a las 19:00",
+        "meta": "@sys.time",
+        "alias": "hora",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "2e0a6062-c97a-5205-8e54-93b46b6c6f78",
+    "data": [
+      {
+        "text": "Quiero ir a ",
+        "userDefined": false
+      },
+      {
+        "text": "zumba",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "el viernes",
+        "meta": "@sys.date",
+        "alias": "fecha",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "a las seis de la tarde",
+        "meta": "@sys.time",
+        "alias": "hora",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "a8557da8-fd36-5c87-823a-bd7491be0b0e",
+    "data": [
+      {
+        "text": "Reserva ",
+        "userDefined": false
+      },
+      {
+        "text": "body pump",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      },
+      {
+        "text": " para ",
+        "userDefined": false
+      },
+      {
+        "text": "el lunes",
+        "meta": "@sys.date",
+        "alias": "fecha",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "a las 9:30",
+        "meta": "@sys.time",
+        "alias": "hora",
+        "userDefined": true
+      },
+      {
+        "text": ", mi DNI es ",
+        "userDefined": false
+      },
+      {
+        "text": "12345678Z",
+        "meta": "@dni",
+        "alias": "dni",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "39462b9c-508b-590a-8ee4-15024cf65928",
+    "data": [
+      {
+        "text": "Necesito plaza en ",
+        "userDefined": false
+      },
+      {
+        "text": "HIIT",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "pasado mañana",
+        "meta": "@sys.date",
+        "alias": "fecha",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "38cbb981-af13-5889-b0a8-0beb836000cf",
+    "data": [
+      {
+        "text": "Quiero reservar ",
+        "userDefined": false
+      },
+      {
+        "text": "ciclo indoor",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "a las 20:00",
+        "meta": "@sys.time",
+        "alias": "hora",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "134eb036-bd96-573b-880f-80068d282e9c",
+    "data": [
+      {
+        "text": "Reserva una clase de ",
+        "userDefined": false
+      },
+      {
+        "text": "yoga",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      },
+      {
+        "text": " con el DNI ",
+        "userDefined": false
+      },
+      {
+        "text": "12345678 z",
+        "meta": "@dni",
+        "alias": "dni",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "aebbeba1-4f00-5e1d-bb45-d29666759c24",
+    "data": [
+      {
+        "text": "Mi DNI es ",
+        "userDefined": false
+      },
+      {
+        "text": "87654321-X",
+        "meta": "@dni",
+        "alias": "dni",
+        "userDefined": true
+      },
+      {
+        "text": " y quiero reservar ",
+        "userDefined": false
+      },
+      {
+        "text": "pilates",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "bc20fc12-ecab-51e1-9f0a-88677b463a19",
+    "data": [
+      {
+        "text": "¿Puedo reservar plaza para ",
+        "userDefined": false
+      },
+      {
+        "text": "crossfit",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "el jueves",
+        "meta": "@sys.date",
+        "alias": "fecha",
+        "userDefined": true
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "22d66edd-c9ee-51a6-8021-a5f658067fb2",
+    "data": [
+      {
+        "text": "Quiero apuntarme a ",
+        "userDefined": false
+      },
+      {
+        "text": "bici",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "hoy",
+        "meta": "@sys.date",
+        "alias": "fecha",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "da4c424f-dfdc-5461-87ac-85fc8f677761",
+    "data": [
+      {
+        "text": "Hazme una reserva para la clase de ",
+        "userDefined": false
+      },
+      {
+        "text": "zumba",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "eff6d684-f37b-5f34-9190-04fd618f8524",
+    "data": [
+      {
+        "text": "Me apunto a ",
+        "userDefined": false
+      },
+      {
+        "text": "yoga",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "el sábado",
+        "meta": "@sys.date",
+        "alias": "fecha",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "a las 10:00",
+        "meta": "@sys.time",
+        "alias": "hora",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "757c70ee-555c-5816-9907-1f903236658d",
+    "data": [
+      {
+        "text": "Quiero coger sitio en ",
+        "userDefined": false
+      },
+      {
+        "text": "spinning",
+        "meta": "@clase",
+        "alias": "clase",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "el miércoles",
+        "meta": "@sys.date",
+        "alias": "fecha",
+        "userDefined": true
+      },
+      {
+        "text": " con DNI ",
+        "userDefined": false
+      },
+      {
+        "text": "11111111H",
+        "meta": "@dni",
+        "alias": "dni",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  }
+]
