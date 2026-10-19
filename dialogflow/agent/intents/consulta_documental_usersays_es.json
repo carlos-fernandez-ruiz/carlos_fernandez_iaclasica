@@ -258,5 +258,187 @@
     "count": 0,
     "lang": "es",
     "updated": 0
+  },
+  {
+    "id": "d9c45d05-c992-54cf-b352-d1d225290259",
+    "data": [
+      {
+        "text": "¿Hay parking?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "52bde052-93da-59d1-9abe-12f2357a270e",
+    "data": [
+      {
+        "text": "¿Tenéis aparcamiento para socios?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "a9f2acfc-7992-5892-94d9-dbeed7eaf2ba",
+    "data": [
+      {
+        "text": "¿Hay wifi en el gimnasio?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "c485d7a9-5249-5167-b278-f5ac3055ba9e",
+    "data": [
+      {
+        "text": "¿Hay sauna?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "c0487339-c878-54cd-b824-93b0f59215b2",
+    "data": [
+      {
+        "text": "¿Cuánto cuesta la sauna?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "442e5c8b-84e0-5ea6-bfb4-8cc5c0a8d76e",
+    "data": [
+      {
+        "text": "¿Tenéis duchas?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "9a24c1a2-54f8-5438-b918-9d13acf3cff6",
+    "data": [
+      {
+        "text": "¿Se puede llevar al perro?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "cdbfb7c8-8e5a-5e43-8946-20e94fa73c19",
+    "data": [
+      {
+        "text": "¿Hay entrenador personal?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "65869b17-3425-59a9-b2ca-21d231e5fee4",
+    "data": [
+      {
+        "text": "¿Cuánto cuesta la piscina?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "b0dbb56f-3f0c-596b-9d90-7032657a8540",
+    "data": [
+      {
+        "text": "¿Se puede pagar con tarjeta?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "875b9e5d-6fce-5ad3-9d82-0c0ea27842dc",
+    "data": [
+      {
+        "text": "¿Hay descuento para familias numerosas?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "356142df-84b9-51aa-bd34-e22aea4706f1",
+    "data": [
+      {
+        "text": "hay taquillas",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "6e78e35b-68c0-5bad-8a21-b6917b071443",
+    "data": [
+      {
+        "text": "¿Cómo me doy de baja?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "32091c88-a4e9-58c4-895f-7f87bfeb8f51",
+    "data": [
+      {
+        "text": "¿Qué pasa si pierdo el carnet?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
   }
 ]

@@ -182,6 +182,7 @@ cython_debug/
 # --- Proyecto IA Clasica (gimnasio) ---
 # Clave JSON de la service account de Google Cloud (nunca en git)
 credenciales/
+carlosfernandezagent-*.json
 # Audio generado por el cliente de voz
 *.wav
 # ZIP generado por dialogflow/build_zip.py (dist/ ya ignorado arriba)

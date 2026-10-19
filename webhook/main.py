@@ -14,7 +14,7 @@ ngrok http 8000) y regenerar el agente con la URL acabada en /webhook:
 Piezas:
     datos.py     socios y horarios simulados
     reservas.py  reglas de negocio (DNI, plazas, alternativas)
-    rag.py       consulta documental con LLM (se completa en las Sesiones 3 y 4)
+    rag.py       consulta documental con LLM sobre el texto del OCR
     main.py      este fichero: traduce Dialogflow <-> negocio y redacta las respuestas
 """
 
@@ -249,11 +249,17 @@ def gestionar_horario(parametros: dict) -> dict:
 
 def gestionar_documental(pregunta: str, es_fallback: bool) -> dict:
     respuesta = rag.responder_pregunta(pregunta)
+    # En el fallback, si el modelo falla, se deja la respuesta estática de
+    # Dialogflow ("no te he entendido...")
+    if es_fallback and respuesta == rag.MENSAJE_ERROR:
+        return {}
     if respuesta is None:
-        # En el fallback, sin documentos relacionados, se deja la respuesta
-        # estática de Dialogflow ("no te he entendido...")
+        # En el fallback no se sabe si era una pregunta que los documentos no
+        # responden ("¿hay parking?") o algo sin sentido: se dice explícitamente
+        # que no está y se reconduce a lo que sí sabe hacer el agente.
         if es_fallback:
-            return {}
+            return responder("No tengo esa información en la normativa del gimnasio. "
+                             f"{pausa(200)}Si buscabas otra cosa, puedo reservarte una clase o darte los horarios.")
         return responder("No encuentro esa información en la normativa del gimnasio. "
                          "Puedes preguntarlo en recepción.")
     return responder(escape(respuesta))  # el texto del LLM podría romper el SSML
