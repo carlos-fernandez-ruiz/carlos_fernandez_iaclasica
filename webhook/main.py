@@ -1,24 +1,12 @@
 """
-Webhook de Dialogflow ES del Gimnasio Atlas (FastAPI).
-
-Arrancar (desde la carpeta webhook/):
-    python3 -m venv .venv
-    source .venv/bin/activate           # WSL/Linux  (Windows: .venv\\Scripts\\activate)
-    pip install -r requirements.txt
-    uvicorn main:app --reload --port 8000
-
-Después: exponer el puerto 8000 (VS Code PORTS -> Port Visibility -> Public, o
-ngrok http 8000) y regenerar el agente con la URL acabada en /webhook:
-    python ../dialogflow/build_zip.py --webhook-url https://.../webhook
-
-Piezas:
-    datos.py     socios y horarios simulados
-    reservas.py  reglas de negocio (DNI, plazas, alternativas)
-    rag.py       consulta documental con LLM sobre el texto del OCR
-    main.py      este fichero: traduce Dialogflow <-> negocio y redacta las respuestas
+Recibe las peticiones de Dialogflow y prepara las respuestas de voz.
+Las reglas de reserva están en reservas.py y la consulta documental en rag.py.
+Para arrancar y probar el webhook, consulta README.md.
 """
 
+import threading
 import time
+from contextlib import asynccontextmanager
 from html import escape
 from pathlib import Path
 
@@ -34,7 +22,15 @@ from reservas import (  # noqa: E402
     leer_fecha, plazas_libres, registrar_reserva,
 )
 
-app = FastAPI()
+
+@asynccontextmanager
+async def arranque(app: FastAPI):
+    # Prepara el modelo sin bloquear las peticiones.
+    threading.Thread(target=rag.calentar, daemon=True).start()
+    yield
+
+
+app = FastAPI(lifespan=arranque)
 
 CTX_RESERVA = "ctx_reserva_en_curso"
 CTX_FOLLOWUP = "reservar_clase-followup"  # lo exigen los follow-up sí/no
@@ -55,12 +51,41 @@ def pausa(ms: int = 300) -> str:
 
 
 def deletrear(texto: str) -> str:
-    """El DNI y el código de reserva se leen carácter a carácter."""
-    return f'<say-as interpret-as="characters">{texto}</say-as>'
+    """El DNI y el código de reserva se leen carácter a carácter y más despacio."""
+    return f'<prosody rate="slow"><say-as interpret-as="characters">{texto}</say-as></prosody>'
 
 
 def fecha_hablada(dia) -> str:
     return f"el {DIAS[dia.weekday()]} {dia.day} de {MESES[dia.month - 1]}"
+
+
+HORAS_EN_LETRA = ["doce", "una", "dos", "tres", "cuatro", "cinco", "seis",
+                  "siete", "ocho", "nueve", "diez", "once"]
+
+
+def hora_hablada(hora: str) -> str:
+    """Convierte '19:30' en 'las siete y media de la tarde' para leerlo en voz alta."""
+    h, m = (int(x) for x in hora.split(":"))
+    if m == 45:
+        h, minutos = h + 1, " menos cuarto"
+    else:
+        minutos = {0: "", 15: " y cuarto", 30: " y media"}.get(m, f" y {m}")
+    if h < 6 or h >= 21:
+        franja = "de la noche"
+    elif h < 12:
+        franja = "de la mañana"
+    elif h < 13:
+        franja = "del mediodía"
+    else:
+        franja = "de la tarde"
+    numero = HORAS_EN_LETRA[h % 12]
+    articulo = "la" if numero == "una" else "las"
+    return f"{articulo} {numero}{minutos} {franja}"
+
+
+def horas_habladas(horas: list[str]) -> str:
+    """['09:00', '19:00'] -> 'las nueve de la mañana y las siete de la tarde'."""
+    return enumerar([hora_hablada(h) for h in horas])
 
 
 def enumerar(elementos: list[str]) -> str:
@@ -86,8 +111,7 @@ def contexto(sesion: str, nombre: str, vida: int, parametros: dict | None = None
 
 
 def mantener_reserva(sesion: str, parametros: dict) -> list:
-    """Deja viva la reserva para que el usuario pueda decir sí/no o corregir el DNI.
-    Los contextos que devuelve el webhook sustituyen a los activos, parámetros incluidos."""
+    """Mantiene los datos para confirmar, cancelar o corregir el DNI en el siguiente turno."""
     return [
         contexto(sesion, CTX_RESERVA, 5, parametros),
         contexto(sesion, CTX_FOLLOWUP, 2, parametros),
@@ -104,23 +128,19 @@ def explicar_no_disponible(ev: Evaluacion) -> str:
     cuando = fecha_hablada(ev.dia)
     del_dia = "del" + cuando[2:]  # "el lunes 2..." -> "del lunes 2..."
     if ev.estado == "pasada":
-        return f"La clase de {ev.clase} {del_dia} a las {ev.hora} ya ha empezado."
+        return f"La clase de {ev.clase} {del_dia} a {hora_hablada(ev.hora)} ya ha empezado."
     if ev.estado == "completa":
-        return f"La clase de {ev.clase} {del_dia} a las {ev.hora} está completa."
+        return f"La clase de {ev.clase} {del_dia} a {hora_hablada(ev.hora)} está completa."
     if ev.horas_dia:
-        return (f"{cuando.capitalize()} hay {ev.clase} a las {enumerar(ev.horas_dia)}, "
-                f"pero no a las {ev.hora}.")
+        return (f"{cuando.capitalize()} hay {ev.clase} a {horas_habladas(ev.horas_dia)}, "
+                f"pero no a {hora_hablada(ev.hora)}.")
     return f"{cuando.capitalize()} no hay clase de {ev.clase}."
 
 
 def gestionar_reserva(sesion: str, clase, fecha, hora, dni) -> dict:
-    """
-    Valida la reserva con los datos simulados y decide la respuesta.
-    Si se puede reservar (la sesión pedida o una alternativa), guarda en el
-    contexto la sesión exacta a confirmar: r_fecha, r_hora y estado='pendiente'.
-    """
+    """Valida la reserva y guarda la sesión propuesta en r_fecha y r_hora del contexto."""
     ev = evaluar_reserva(clase, fecha, hora, dni)
-    # Parámetros originales: los usan los follow-up (#ctx_reserva_en_curso.x)
+    # Conserva los datos para los siguientes turnos de la reserva.
     parametros = {"clase": clase, "fecha": fecha, "hora": hora, "dni": dni}
 
     if ev.estado == "dni_no_valido":
@@ -147,11 +167,11 @@ def gestionar_reserva(sesion: str, clase, fecha, hora, dni) -> dict:
 
     if ev.estado == "ya_reservada":
         texto = (f"{ev.nombre}, ya tienes plaza en {ev.clase} {fecha_hablada(ev.dia)} "
-                 f"a las {ev.hora}. {pausa()}¿Te ayudo con otra cosa?")
+                 f"a {hora_hablada(ev.hora)}. {pausa()}¿Te ayudo con otra cosa?")
         return responder(texto, cerrar_reserva(sesion))
 
     if ev.estado == "disponible":
-        texto = (f"{ev.nombre}, te reservo {ev.clase} {fecha_hablada(ev.dia)} a las {ev.hora}. "
+        texto = (f"{ev.nombre}, te reservo {ev.clase} {fecha_hablada(ev.dia)} a {hora_hablada(ev.hora)}. "
                  f"Quedan {ev.plazas} plazas. {pausa()}¿Confirmo la reserva?")
         pendiente = {**parametros, "estado": "pendiente",
                      "r_fecha": ev.dia.isoformat(), "r_hora": ev.hora}
@@ -166,18 +186,14 @@ def gestionar_reserva(sesion: str, clase, fecha, hora, dni) -> dict:
 
     otro_dia, otra_hora = ev.alternativa
     texto = (f"{motivo} {pausa()}La más cercana con plaza es {fecha_hablada(otro_dia)} "
-             f"a las {otra_hora}. ¿Te la reservo?")
+             f"a {hora_hablada(otra_hora)}. ¿Te la reservo?")
     pendiente = {**parametros, "estado": "pendiente",
                  "r_fecha": otro_dia.isoformat(), "r_hora": otra_hora}
     return responder(texto, mantener_reserva(sesion, pendiente))
 
 
 def gestionar_confirmacion(sesion: str, parametros: dict) -> dict:
-    """
-    'reservar_clase - si'. Los datos llegan como parámetros del intent
-    (#ctx_reserva_en_curso.*), porque el intent ya ha cerrado el contexto.
-    Se vuelve a validar antes de apuntar: la plaza puede haberse ocupado.
-    """
+    """Recibe la sesión del contexto y vuelve a comprobar las plazas antes de reservar."""
     estado = parametros.get("estado", "")
     clase, dni = parametros.get("clase", ""), parametros.get("dni", "")
 
@@ -199,7 +215,7 @@ def gestionar_confirmacion(sesion: str, parametros: dict) -> dict:
     codigo = registrar_reserva(ev)
     print(f"RESERVA {codigo}: {ev.dni} {ev.clase} {ev.dia} {ev.hora}")
     texto = (f"¡Hecho, {ev.nombre}! Tienes plaza en {ev.clase} {fecha_hablada(ev.dia)} "
-             f"a las {ev.hora}. {pausa()}Tu código de reserva es {deletrear(codigo)}. "
+             f"a {hora_hablada(ev.hora)}. {pausa()}Tu código de reserva es {deletrear(codigo)}. "
              f"{pausa()}¿Puedo ayudarte en algo más?")
     return responder(texto, cerrar_reserva(sesion))
 
@@ -207,8 +223,8 @@ def gestionar_confirmacion(sesion: str, parametros: dict) -> dict:
 # Consulta de horarios
 
 def resumen_horario(clase: str) -> str:
-    """'los lunes a las 09:00 y 19:00, los miércoles ... y los sábados a las 10:00'."""
-    partes = [f"los {plural_dia(d)} a las {enumerar(sorted(horas))}"
+    """Redacta el horario semanal de una clase para leerlo en voz alta."""
+    partes = [f"los {plural_dia(d)} a {horas_habladas(sorted(horas))}"
               for d, horas in sorted(HORARIOS[clase].items())]
     return enumerar(partes)
 
@@ -224,16 +240,16 @@ def gestionar_horario(parametros: dict) -> dict:
                      f"{pausa(200)}Hay {clase} {resumen_horario(clase)}.")
         else:
             completas = [h for h in horas if plazas_libres(clase, dia, h) <= 0]
-            texto = f"{fecha_hablada(dia).capitalize()} hay {clase} a las {enumerar(horas)}."
+            texto = f"{fecha_hablada(dia).capitalize()} hay {clase} a {horas_habladas(horas)}."
             if completas:
-                texto += f" La de las {enumerar(completas)} está completa."
+                texto += f" La de {horas_habladas(completas)} está completa."
         return responder(f"{texto} {pausa()}¿Quieres reservar?")
 
     if clase:
         return responder(f"Hay {clase} {resumen_horario(clase)}. {pausa()}¿Quieres reservar?")
 
     if dia:
-        sesiones = [f"{c} a las {enumerar(horas_del_dia(c, dia))}"
+        sesiones = [f"{c} a {horas_habladas(horas_del_dia(c, dia))}"
                     for c in HORARIOS if horas_del_dia(c, dia)]
         if not sesiones:
             return responder(f"{fecha_hablada(dia).capitalize()} no hay clases dirigidas. "
@@ -249,14 +265,11 @@ def gestionar_horario(parametros: dict) -> dict:
 
 def gestionar_documental(pregunta: str, es_fallback: bool) -> dict:
     respuesta = rag.responder_pregunta(pregunta)
-    # En el fallback, si el modelo falla, se deja la respuesta estática de
-    # Dialogflow ("no te he entendido...")
+    # Si falla Gemini, Dialogflow usa su respuesta de fallback.
     if es_fallback and respuesta == rag.MENSAJE_ERROR:
         return {}
     if respuesta is None:
-        # En el fallback no se sabe si era una pregunta que los documentos no
-        # responden ("¿hay parking?") o algo sin sentido: se dice explícitamente
-        # que no está y se reconduce a lo que sí sabe hacer el agente.
+        # Si no hay respuesta, ofrece reservas y horarios.
         if es_fallback:
             return responder("No tengo esa información en la normativa del gimnasio. "
                              f"{pausa(200)}Si buscabas otra cosa, puedo reservarte una clase o darte los horarios.")
@@ -275,8 +288,7 @@ def enrutar(body: dict) -> dict:
     pregunta = resultado.get("queryText", "")
 
     if intencion == "reservar_clase":
-        # Con "webhook call for slot filling" nos llaman en cada turno.
-        # Si aún faltan parámetros, respuesta vacía: Dialogflow usa sus prompts.
+        # Si faltan datos, Dialogflow hace la siguiente pregunta.
         if not resultado.get("allRequiredParamsPresent", False):
             return {}
         return gestionar_reserva(sesion, parametros.get("clase"), parametros.get("fecha"),
@@ -299,7 +311,7 @@ def enrutar(body: dict) -> dict:
     if intencion == "Default Fallback Intent":
         return gestionar_documental(pregunta, es_fallback=True)
 
-    # Nunca dejar al agente sin respuesta
+    # Respuesta para intenciones sin gestionar.
     return responder("Todavía no sé gestionar esa petición.")
 
 
@@ -309,7 +321,7 @@ async def webhook(request: Request):
     body = await request.json()
     resultado = body.get("queryResult", {})
 
-    # Se imprime siempre lo que llega: es lo primero que se mira al depurar
+    # Registra la petición para depurar errores.
     print("-" * 50)
     print("INTENCION:", resultado.get("intent", {}).get("displayName"))
     print("PARAMETROS:", resultado.get("parameters", {}))
@@ -328,7 +340,7 @@ async def webhook(request: Request):
 
 @app.get("/")
 def raiz():
-    """Para comprobar de un vistazo que el túnel llega hasta aquí."""
+    """Devuelve el estado del webhook para comprobar la conexión."""
     return {
         "estado": "ok",
         "socios": len(SOCIOS),

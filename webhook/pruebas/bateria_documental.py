@@ -1,13 +1,9 @@
 """
-Batería de la consulta documental: 5 preguntas con respuesta en los documentos
-y 5 sin ella. Llama directamente a rag.py (no hace falta arrancar el webhook).
+Prueba cinco preguntas con respuesta en los documentos y cinco sin ella.
+Comprueba los datos esperados, NO_ENCONTRADO y el límite de cinco segundos.
 
-Uso (desde webhook/, con el .venv activado y GOOGLE_API_KEY en el .env):
-    python pruebas/bateria_documental.py
-
-Una pregunta con respuesta pasa si el texto contiene los datos esperados; una
-sin respuesta pasa si el modelo devuelve NO_ENCONTRADO. Todas deben tardar
-menos de 5 s (el límite de Dialogflow).
+Uso desde webhook/: python pruebas/bateria_documental.py
+Requiere GOOGLE_API_KEY en el .env, pero no el servidor arrancado.
 """
 
 import re
@@ -25,8 +21,7 @@ import rag  # noqa: E402  (después de load_dotenv)
 
 LIMITE_S = 5
 
-# (pregunta, datos esperados): cada grupo es una lista de alternativas y la
-# respuesta debe contener al menos una de cada grupo.
+# Cada respuesta debe incluir al menos una alternativa de cada grupo.
 CON_RESPUESTA = [
     ("¿Cuánto cuesta el gimnasio al mes?", [["22,05"]]),
     ("¿Cuánto dura como máximo una sesión de musculación?", [["1 hora", "una hora"]]),
@@ -36,8 +31,7 @@ CON_RESPUESTA = [
     ("¿Qué descuento tienen las familias numerosas?", [["25"]]),
 ]
 
-# Preguntas trampa: temas cercanos a lo que hay en los documentos (precios,
-# descuentos, horarios), pero cuya respuesta no aparece.
+# Preguntas relacionadas con el gimnasio que los documentos no responden.
 SIN_RESPUESTA = [
     "¿Hay parking gratuito para los socios?",
     "¿Cuánto cuesta un entrenador personal?",

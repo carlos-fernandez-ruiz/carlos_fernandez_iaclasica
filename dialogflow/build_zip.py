@@ -1,17 +1,8 @@
 """
-Empaqueta el agente de Dialogflow ES (dialogflow/agent/) en un ZIP listo para
-"Settings -> Export and Import -> Restore from ZIP".
+Valida los JSON y genera un ZIP para importar el agente en Dialogflow ES.
 
-Uso:
-    python build_zip.py
-    python build_zip.py --webhook-url https://xxxx-8000.devtunnels.ms/webhook
-
-Sin --webhook-url el fulfillment queda desactivado (los intents responden con
-sus respuestas estaticas). Con --webhook-url se activa y se rellena la URL,
-para que un Restore no borre la configuracion de Fulfillment.
-
-Antes de empaquetar valida que todos los JSON se pueden leer y que los
-follow-up apuntan a un intent padre que existe.
+Uso: python build_zip.py --webhook-url https://tu-tunel/webhook
+Sin --webhook-url se conserva la configuración de agent.json.
 """
 
 import argparse

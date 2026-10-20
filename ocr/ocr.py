@@ -1,16 +1,9 @@
 """
-OCR offline con Tesseract + extracción y validación de datos con regex.
+Extrae texto y campos de las imágenes con Tesseract y regex.
+Cada carpeta de ocr/documentos/ contiene las páginas de un documento.
+Guarda el resultado en data/documentos.json para evitar hacer OCR en cada consulta.
 
-Se ejecuta UNA VEZ, a mano, y deja el resultado en data/documentos.json. El
-webhook solo lee ese fichero al arrancar: reconocer una página tarda alrededor
-de un segundo y Dialogflow corta la llamada a los 5, así que el OCR nunca va
-dentro de la petición.
-
-Cada subcarpeta de ocr/documentos/ es un documento y cada imagen una página
-(pagina_1.png, pagina_2.png...). Las páginas se concatenan en orden.
-
-Uso (desde la raíz del repositorio, con el .venv del webhook activado):
-    python ocr/ocr.py
+Uso desde la raíz: python ocr/ocr.py
 """
 
 import json
@@ -26,8 +19,7 @@ from PIL import Image
 
 # Configuración
 
-# En WSL/Linux se usa el tesseract del PATH; en Windows, el del instalador de
-# UB Mannheim si no está en el PATH.
+# Si Tesseract no está en el PATH, busca la instalación habitual de Windows.
 if shutil.which("tesseract") is None:
     ejecutable_windows = Path(r"C:\Program Files\Tesseract-OCR\tesseract.exe")
     if ejecutable_windows.is_file():
@@ -38,8 +30,7 @@ CARPETA = RAIZ / "ocr" / "documentos"
 SALIDA = RAIZ / "data" / "documentos.json"
 EXTENSIONES = (".jpg", ".jpeg", ".png", ".tif", ".tiff", ".bmp")
 
-# Título legible de cada documento. Es metadato, no sale del OCR: el título de
-# las normas del gimnasio está en negro sobre gris y Tesseract no lo lee.
+# Títulos manuales: el OCR no siempre lee bien los encabezados.
 TITULOS = {
     "tasas_instalaciones": "Ordenanza de tasas de instalaciones deportivas y piscinas",
     "normas_gimnasio": "Normas de uso del gimnasio de musculación",
@@ -47,18 +38,15 @@ TITULOS = {
     "rutina_3_dias": "Rutina de gimnasio de 3 días",
 }
 
-# --psm 4 = "una columna de texto de tamaño variable". Probados 3, 4 y 6:
-# el 3 (automático) parte las tablas en bloques y desordena las celdas; el 6
-# (bloque uniforme) pierde filas en las tablas; el 4 respeta la fila completa.
+# Este modo conserva mejor las filas de las tablas.
 CONFIG_TESSERACT = "--psm 4"
 
-# Preprocesado. Las imágenes son capturas de PDF de unos 700 px de ancho
-# (~90 ppp en un A4): la letra mide 12-14 px y Tesseract rinde mejor con 25-35.
+# Amplía las capturas para facilitar la lectura de letras pequeñas.
 ESCALA = 2  # x3 empeora: en las tablas se pierden filas enteras
 LINEA_HORIZONTAL_MIN = 80  # px (ya escalados): más largo que cualquier letra
 LINEA_VERTICAL_MIN = 60
-GROSOR_LINEA_MAX = 8  # más grueso es un recuadro relleno (título en blanco sobre azul), no un borde
-ALTO_RECUADRO_MIN = 20  # px de filas casi negras seguidas para considerarlo recuadro relleno
+GROSOR_LINEA_MAX = 8  # px; evita borrar recuadros rellenos
+ALTO_RECUADRO_MIN = 20  # px para detectar un recuadro oscuro
 
 
 # Preprocesado de imagen
@@ -86,12 +74,7 @@ def tramos_largos(tinta: np.ndarray, longitud_min: int) -> np.ndarray:
 
 
 def rebinarizar_recuadros(gris: np.ndarray, tinta: np.ndarray) -> None:
-    """
-    Los títulos sobre fondo de color (blanco sobre azul, negro sobre gris)
-    quedan, tras el umbral global, como un bloque negro en el que no se lee
-    nada. Cada bloque se vuelve a binarizar con su propio umbral y la clase
-    minoritaria (las letras) pasa a ser la tinta. Modifica tinta en sitio.
-    """
+    """Recupera las letras sobre fondos oscuros con un umbral local. Modifica tinta."""
     filas_oscuras = np.concatenate(([False], tinta.mean(axis=1) > 0.5, [False]))
     cambios = np.diff(filas_oscuras.astype(np.int8))
     for fila_ini, fila_fin in zip(np.where(cambios == 1)[0], np.where(cambios == -1)[0]):
@@ -114,16 +97,7 @@ def lineas_de_tabla(tinta: np.ndarray) -> np.ndarray:
 
 
 def preprocesar(ruta: Path) -> Image.Image:
-    """
-    1. Transparencia sobre fondo blanco: las capturas vienen en RGBA y un fondo
-       transparente puede acabar negro al pasarlo a gris.
-    2. Escala de grises.
-    3. Reescalado x2 (LANCZOS) para que la letra tenga un tamaño cómodo.
-    4. Binarizado con umbral de Otsu: tinta negra pura sobre blanco puro.
-    5. Títulos sobre fondo de color: se binarizan aparte con su propio umbral.
-    6. Borrado de las líneas de las tablas: Tesseract las lee como "|" o "[" y
-       se come comas y dígitos de las celdas ("24,80 €" salía como "2480€").
-    """
+    """Amplía la imagen, separa texto y fondo y borra bordes de tabla que confunden al OCR."""
     imagen = Image.open(ruta)
     if imagen.mode in ("RGBA", "LA", "P"):
         imagen = imagen.convert("RGBA")
@@ -146,13 +120,13 @@ def preprocesar(ruta: Path) -> Image.Image:
 def leer_pagina(ruta: Path) -> str:
     return pytesseract.image_to_string(
         preprocesar(ruta),
-        lang="spa",  # sin esto, Tesseract asume inglés y rompe acentos y la ñ
+        lang="spa",  # español para reconocer tildes y ñ
         config=CONFIG_TESSERACT,
     )
 
 
 def limpiar_texto(texto: str) -> str:
-    """Limpieza conservadora del texto que irá al LLM: solo formato, nunca contenido."""
+    """Quita espacios y restos de bordes de tabla del texto reconocido."""
     texto = re.sub(r"[ \t]*[|\[\]][ \t]*", " ", texto)  # restos de bordes de tabla
     texto = re.sub(r"[ \t]{2,}", " ", texto)
     texto = "\n".join(linea.strip() for linea in texto.splitlines())
@@ -162,11 +136,7 @@ def limpiar_texto(texto: str) -> str:
 # Extracción y validación con regex
 
 def normalizar_ocr(texto: str) -> str:
-    """
-    Corrige confusiones típicas de Tesseract (O/0, l/1, I/1) SOLO dentro de
-    números. Es destructivo: se aplica a la copia que pasa por las regex,
-    nunca al texto que recibe el LLM.
-    """
+    """Corrige O/0 y l/1 en números, solo en la copia usada para extraer campos."""
     texto = re.sub(r"(?<=\d)[Oo]|[Oo](?=\d)", "0", texto)
     texto = re.sub(r"(?<=\d)[lI]|[lI](?=\d)", "1", texto)
     return texto
@@ -203,11 +173,7 @@ DIA_RUTINA = re.compile(r"^D[íi]a\s?(\d)$", re.I)
 
 
 def extraer_campos(texto: str) -> tuple[dict, list[str]]:
-    """
-    Devuelve (campos, avisos). Cada coincidencia se valida además de casar con
-    el patrón; las que no pasan la validación van a avisos para revisarlas a
-    mano en lugar de colarse como datos buenos.
-    """
+    """Devuelve campos validados y avisos sobre valores dudosos para revisarlos a mano."""
     texto = normalizar_ocr(texto)
     campos: dict[str, list] = {clave: [] for clave in PATRONES}
     avisos: list[str] = []
@@ -215,8 +181,7 @@ def extraer_campos(texto: str) -> tuple[dict, list[str]]:
     for m in PATRONES["importe"].finditer(texto):
         bruto = m.group(1)
         if "," not in bruto:
-            # La ordenanza escribe todos los importes con céntimos: "420€" es
-            # "4,20 €" con la coma perdida por el OCR, no 420 euros.
+            # Un importe sin céntimos puede haber perdido la coma: «4,20 €» → «420€».
             avisos.append(f"importe sin decimales (coma perdida en el OCR): {m.group(0)!r}")
             continue
         campos["importe"].append(float(bruto.replace(".", "").replace(",", ".")))
@@ -264,7 +229,7 @@ def extraer_campos(texto: str) -> tuple[dict, list[str]]:
     if ejercicios:
         campos["ejercicios"] = ejercicios
 
-    # Sin duplicados y en orden de aparición; las claves vacías no aportan nada
+    # Conserva el orden y omite duplicados y campos vacíos.
     return {
         clave: (valores if clave == "ejercicios" else list(dict.fromkeys(valores)))
         for clave, valores in campos.items()

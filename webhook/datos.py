@@ -1,23 +1,14 @@
-"""
-Datos simulados del Gimnasio Atlas.
+"""Socios y horarios ficticios para probar el asistente."""
 
-En un sistema real vendrían de una base de datos. Aquí basta un diccionario:
-lo que se evalúa es que la respuesta la decide el código del webhook a partir
-de estos datos, no una plantilla de Dialogflow.
-"""
-
-# DNI normalizado -> datos del socio.
-# Los tres DNI son los que aparecen en las frases de entrenamiento del agente.
+# DNI normalizado → socio. Coinciden con los ejemplos del agente.
 SOCIOS = {
     "12345678Z": {"nombre": "Ana", "cuota_al_dia": True},
     "11111111H": {"nombre": "Marta", "cuota_al_dia": True},
     "87654321X": {"nombre": "Luis", "cuota_al_dia": False},  # cuota impagada
 }
 
-# Clase -> día de la semana (0 = lunes ... 6 = domingo) -> hora -> (aforo, ocupadas).
-# "ocupadas" son las plazas ya reservadas por otros socios en todas las semanas;
-# las reservas que se hacen con el asistente se suman encima (ver reservas.py).
-# El domingo el gimnasio no tiene clases dirigidas.
+# Clase → día (0 = lunes) → hora → (aforo, ocupadas).
+# Las plazas ocupadas se repiten cada semana; las nuevas reservas se suman aparte.
 HORARIOS = {
     "yoga": {
         0: {"09:00": (15, 4), "19:00": (15, 12)},

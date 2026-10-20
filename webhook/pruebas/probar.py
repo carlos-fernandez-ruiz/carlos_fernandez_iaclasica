@@ -1,15 +1,13 @@
 """
-Envía al webhook las peticiones de ejemplo de esta carpeta y muestra la respuesta.
-Simula lo que haría Dialogflow, sin necesidad de túnel ni consola.
+Envía peticiones de ejemplo al webhook sin pasar por Dialogflow.
 
-Uso (con el webhook arrancado en otra terminal):
-    python pruebas/probar.py                       # todas
-    python pruebas/probar.py 03 09                 # solo las que empiezan por 03 y 09
-    python pruebas/probar.py --url https://xxxx/webhook
+Uso desde webhook/, con el servidor arrancado:
+    python pruebas/probar.py
+    python pruebas/probar.py 03 09
+    python pruebas/probar.py --url https://tu-tunel/webhook
 
-Las fechas de las peticiones son de noviembre de 2026; si ya han pasado,
-cámbialas en los JSON. El caso 13 apunta de verdad al socio en memoria: si se
-lanza dos veces seguidas, la segunda responde "ya tienes plaza".
+Actualiza las fechas de noviembre de 2026 cuando hayan pasado.
+El caso 13 guarda una reserva en memoria; al repetirlo, ya estará reservada.
 """
 
 import argparse

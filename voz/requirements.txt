@@ -1,0 +1,5 @@
+# Cliente de voz (voz/cliente_voz.py). Se instala en el Python de Windows (micrófono y altavoz).
+google-cloud-dialogflow
+sounddevice
+numpy
+python-dotenv

@@ -1,9 +1,6 @@
 """
-Lógica de negocio de las reservas: validación del DNI, consulta de horarios y
-plazas, búsqueda de una sesión alternativa y registro de la reserva.
-
-No sabe nada de Dialogflow: recibe valores y devuelve una Evaluacion. El texto
-que se dice al usuario lo construye main.py.
+Valida el DNI, comprueba plazas y registra reservas.
+Devuelve los datos del resultado; main.py redacta la respuesta al usuario.
 """
 
 import random
@@ -16,8 +13,7 @@ from datos import HORARIOS, SOCIOS
 LETRAS_DNI = "TRWAGMYFPDXBNJZSQVHLCKE"
 PATRON_DNI = re.compile(r"^\d{8}[A-Z]$")
 
-# Reservas hechas con el asistente desde que arrancó el webhook (en memoria).
-# (clase, fecha ISO, hora) -> DNI de los socios apuntados
+# Reservas en memoria: (clase, fecha ISO, hora) → DNI de los socios.
 RESERVAS: dict[tuple[str, str, str], set[str]] = {}
 
 
@@ -48,8 +44,7 @@ def leer_fecha(valor) -> date | None:
 
 
 def leer_hora(valor) -> str | None:
-    """@sys.time llega como '2026-10-18T19:00:00+02:00' (con la fecha de hoy);
-    solo interesa la hora. También acepta '19:00' (formato guardado en el contexto)."""
+    """Extrae HH:MM de una fecha de Dialogflow o de la hora guardada en el contexto."""
     texto = str(valor or "")
     if re.fullmatch(r"\d{2}:\d{2}", texto):
         return texto
@@ -121,18 +116,7 @@ def buscar_alternativa(clase: str, dia: date, hora: str, dni: str,
 
 @dataclass
 class Evaluacion:
-    """
-    estado:
-      dni_no_valido        motivo_dni = 'formato' | 'letra'
-      socio_no_encontrado
-      cuota_impagada
-      datos_incompletos    falta la clase, la fecha o la hora (o no se entienden)
-      sin_sesion           no hay esa clase ese día o a esa hora
-      pasada               la sesión ya ha empezado
-      completa             no quedan plazas
-      ya_reservada         el socio ya está apuntado a esa sesión
-      disponible           se puede reservar
-    """
+    """Resultado de la reserva, con el motivo del rechazo y una alternativa si la hay."""
     estado: str
     dni: str = ""
     nombre: str = ""
@@ -146,7 +130,7 @@ class Evaluacion:
 
 
 def evaluar_reserva(clase, fecha, hora, dni, ahora: datetime | None = None) -> Evaluacion:
-    """Recibe los parámetros tal como llegan de Dialogflow y decide qué pasa."""
+    """Comprueba DNI, cuota y sesión; propone otra sesión si hace falta."""
     ahora = ahora or datetime.now()
 
     dni = normalizar_dni(dni)

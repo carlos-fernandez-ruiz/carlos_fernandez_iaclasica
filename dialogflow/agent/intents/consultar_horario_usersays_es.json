@@ -280,5 +280,70 @@
     "count": 0,
     "lang": "es",
     "updated": 0
+  },
+  {
+    "id": "5ef08f88-a574-4d36-9002-fe7d23be0385",
+    "data": [
+      {
+        "text": "¿Qué clases hay en el gimnasio?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "abb31d8b-bcb5-4580-a0ee-1065433ece17",
+    "data": [
+      {
+        "text": "¿Qué clases tenéis?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "8d11bfbf-4517-4e17-8350-6d15f9614bd2",
+    "data": [
+      {
+        "text": "¿Qué actividades hay?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "1b988c23-8a9b-42a3-9e26-ff129366cf09",
+    "data": [
+      {
+        "text": "¿Qué clases dirigidas hay?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
+  },
+  {
+    "id": "b3d5521f-c1fd-4f01-a55e-ca393b0777fd",
+    "data": [
+      {
+        "text": "Hola, ¿qué clases hay?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "es",
+    "updated": 0
   }
 ]
