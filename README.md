@@ -6,6 +6,8 @@ Asistente para un gimnasio ficticio. Permite reservar clases, consultar horarios
 
 Para reservar, pide clase, fecha, hora y DNI. Comprueba el DNI, la cuota y las plazas antes de pedir confirmación. Si la sesión no está disponible, propone otra cercana.
 
+**Vídeo de demostración:** [docs/video_demo.mp4](docs/video_demo.mp4)
+
 ## Cómo funciona
 
 ```mermaid
@@ -34,10 +36,25 @@ El OCR se ejecuta por separado. El webhook lee el resultado al arrancar para no 
 | `data/documentos.json` | Texto reconocido, campos y avisos del OCR |
 | `webhook/` | Reservas, horarios y consultas documentales ([detalle](webhook/README.md)) |
 | `voz/cliente_voz.py` | Graba el micrófono y reproduce la respuesta |
+| `docs/video_demo.mp4` | Vídeo de demostración de la conversación por voz |
 
 ## Conversación
 
 El agente permite reservar, confirmar, cancelar y corregir el DNI sin empezar de nuevo. También responde a consultas de horarios y documentos, saluda y se despide. Las preguntas que no reconoce se consultan en los documentos.
+
+### Intenciones
+
+| Intención | Contexto | Propósito | Webhook |
+|-|-|-|-|
+| `Default Welcome Intent` | — | Saluda y presenta las opciones: reservar, horarios y normas | No |
+| `reservar_clase` | Abre `ctx_reserva_en_curso` | Pide clase, fecha, hora y DNI (obligatorios). Valida el DNI, la cuota y las plazas, y pide confirmación | Sí, también en el slot filling |
+| `reservar_clase - si` | Requiere `ctx_reserva_en_curso` | Confirma la reserva, da el código y cierra el contexto | Sí |
+| `reservar_clase - no` | Requiere `ctx_reserva_en_curso` | Cancela la reserva y cierra el contexto | No |
+| `reservar_clase - corregir_dni` | Requiere `ctx_reserva_en_curso` | Recoge otro DNI tras un error y vuelve a validar la reserva sin empezar de nuevo | Sí |
+| `consultar_horario` | — | Responde a qué hora hay una clase, con los horarios simulados | Sí |
+| `consulta_documental` | — | Responde sobre normas, tarifas y rutinas con el texto del OCR, o dice que no lo sabe | Sí |
+| `despedida` | — | Cierra la conversación | No |
+| `Default Fallback Intent` | — | Lo que no se reconoce se consulta en los documentos. Si no está, lo dice | Sí |
 
 Las clases son yoga, pilates, spinning, zumba, body pump y HIIT. La entidad `@clase` admite sinónimos como «ciclo indoor». `@dni` acepta puntos, espacios y guiones; el webhook limpia el valor y comprueba la letra. Las fechas y horas usan `@sys.date` y `@sys.time`.
 
